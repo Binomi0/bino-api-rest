@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+html(lang="es-ES")
+    head
+        title= title
+    body
+        h1 Crear Comment
+        form(action="/api/comment" method="post")
+            input(type="text" name="username" placeholder="Username")
+            br
+            input(type="text" name="body" placeholder="Body")
+            br
+            input(type="submit" value="Crear Comment")

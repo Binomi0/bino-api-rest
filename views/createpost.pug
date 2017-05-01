@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+html(lang="es-ES")
+    head
+        title= title
+    body
+        h1 Crear Post
+        form(action="/api/post" method="post")
+            input(type="text" name="title" placeholder="Titulo")
+            br            
+            input(type="textarea" name="name" placeholder="Nombre del autor")
+            br     
+            input(type="submit" value="Crear Post")
