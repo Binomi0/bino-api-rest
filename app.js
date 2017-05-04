@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var dbUrl = 'mongodb://192.168.1.104/gymposts'
+var dbUrl = 'mongodb://192.168.1.104/karate2017'
 mongoose.connect(dbUrl, function(err, res) {
   if(err){
     console.log('DB CONNECTION FAILED: '+err)
@@ -15,8 +15,19 @@ mongoose.connect(dbUrl, function(err, res) {
     console.log('DB CONNECTION SUCCESS: '+dbUrl)
   }
 })
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAwXxY-vBd5Nj5T0yhbTuLrgnHZ88Fy-Qc",
+  authDomain: "karate-santa-pola.firebaseapp.com",
+  databaseURL: "https://karate-santa-pola.firebaseio.com",
+  projectId: "karate-santa-pola",
+  storageBucket: "karate-santa-pola.appspot.com",
+  messagingSenderId: "264498012839"
+};
+
 var index = require('./routes/index');
 var api = require('./routes/api');
+
 
 var app = express();
 

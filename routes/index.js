@@ -14,4 +14,11 @@ router.get('/createcomment', function(req, res, next) {
   res.render('createcomment', null);
 });
 
+router.get('/createclub', function(req, res, next) {
+  res.render('createclub', null);
+});
+
+router.get('/createatleta', function(req, res, next) {
+  res.render('createatleta', null);
+});
 module.exports = router;

@@ -1,0 +1,2514 @@
+@charset "UTF-8";
+/**
+  EDgrid es una librería CSS para construir layouts con Responsive Web Design
+  Importe este archivo en su proyecto para empezar a usarlo
+**/
+/* line 2, dev/scss/components/_base.scss */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* line 8, dev/scss/components/_base.scss */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* line 14, dev/scss/components/_base.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 19, dev/scss/components/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 22, dev/scss/components/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 31, dev/scss/components/_base.scss */
+h2, h3 {
+  text-shadow: 1px 1px rgba(136, 136, 136, 0.6);
+}
+
+/* line 36, dev/scss/components/_base.scss */
+footer {
+  text-shadow: 1px 1px rgba(34, 34, 34, 0.8);
+}
+
+/* line 40, dev/scss/components/_base.scss */
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 46, dev/scss/components/_base.scss */
+#sliderproductos {
+  margin-bottom: 1em;
+}
+
+/* line 2, dev/scss/components/_core.scss */
+.ed-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* line 12, dev/scss/components/_core.scss */
+.ed-item {
+  margin: 0;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+
+/* line 113, dev/scss/components/_core.scss */
+.ed-item {
+  width: 100%;
+}
+
+/* line 118, dev/scss/components/_core.scss */
+.ed-item.ed-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+| Mixin para crear cuadriculas
+|
+| $selector: nombre del selector CSS de cada item de la cuadricula
+|
+| $gutter: separación entre cada item de la cuadricula (opcional)
+|
+*/
+/* line 1, dev/scss/components/_buttons.scss */
+.button, .clases__button, .selector1 {
+  display: inline-block;
+  line-height: 2.5em;
+  padding: 0 1.5em;
+  cursor: pointer;
+  margin-bottom: 1em;
+  border: none;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-5,
+.ed-item.s-5 {
+  width: 5%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-10,
+.ed-item.s-10 {
+  width: 10%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-15,
+.ed-item.s-15 {
+  width: 15%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-20,
+.ed-item.s-20 {
+  width: 20%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-25,
+.ed-item.s-25 {
+  width: 25%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-30,
+.ed-item.s-30 {
+  width: 30%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-35,
+.ed-item.s-35 {
+  width: 35%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-40,
+.ed-item.s-40 {
+  width: 40%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-45,
+.ed-item.s-45 {
+  width: 45%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-50,
+.ed-item.s-50 {
+  width: 50%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-55,
+.ed-item.s-55 {
+  width: 55%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-60,
+.ed-item.s-60 {
+  width: 60%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-65,
+.ed-item.s-65 {
+  width: 65%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-70,
+.ed-item.s-70 {
+  width: 70%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-75,
+.ed-item.s-75 {
+  width: 75%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-80,
+.ed-item.s-80 {
+  width: 80%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-85,
+.ed-item.s-85 {
+  width: 85%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-90,
+.ed-item.s-90 {
+  width: 90%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-95,
+.ed-item.s-95 {
+  width: 95%;
+}
+
+/* line 129, dev/scss/components/_core.scss */
+.s-100,
+.ed-item.s-100 {
+  width: 100%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-1-3,
+.ed-item.s-1-3 {
+  width: 33.33333%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-2-3,
+.ed-item.s-2-3 {
+  width: 66.66667%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-3-3,
+.ed-item.s-3-3 {
+  width: 100%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-1-6,
+.ed-item.s-1-6 {
+  width: 16.66667%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-2-6,
+.ed-item.s-2-6 {
+  width: 33.33333%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-3-6,
+.ed-item.s-3-6 {
+  width: 50%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-4-6,
+.ed-item.s-4-6 {
+  width: 66.66667%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-5-6,
+.ed-item.s-5-6 {
+  width: 83.33333%;
+}
+
+/* line 136, dev/scss/components/_core.scss */
+.s-6-6,
+.ed-item.s-6-6 {
+  width: 100%;
+}
+
+@media all and (min-width: 640px) {
+  /* line 145, dev/scss/components/_core.scss */
+  .m-5,
+  .ed-item.m-5 {
+    width: 5%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-10,
+  .ed-item.m-10 {
+    width: 10%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-15,
+  .ed-item.m-15 {
+    width: 15%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-20,
+  .ed-item.m-20 {
+    width: 20%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-25,
+  .ed-item.m-25 {
+    width: 25%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-30,
+  .ed-item.m-30 {
+    width: 30%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-35,
+  .ed-item.m-35 {
+    width: 35%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-40,
+  .ed-item.m-40 {
+    width: 40%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-45,
+  .ed-item.m-45 {
+    width: 45%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-50,
+  .ed-item.m-50 {
+    width: 50%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-55,
+  .ed-item.m-55 {
+    width: 55%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-60,
+  .ed-item.m-60 {
+    width: 60%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-65,
+  .ed-item.m-65 {
+    width: 65%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-70,
+  .ed-item.m-70 {
+    width: 70%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-75,
+  .ed-item.m-75 {
+    width: 75%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-80,
+  .ed-item.m-80 {
+    width: 80%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-85,
+  .ed-item.m-85 {
+    width: 85%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-90,
+  .ed-item.m-90 {
+    width: 90%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-95,
+  .ed-item.m-95 {
+    width: 95%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .m-100,
+  .ed-item.m-100 {
+    width: 100%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-1-3,
+  .ed-item.m-1-3 {
+    width: 33.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-2-3,
+  .ed-item.m-2-3 {
+    width: 66.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-3-3,
+  .ed-item.m-3-3 {
+    width: 100%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-1-6,
+  .ed-item.m-1-6 {
+    width: 16.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-2-6,
+  .ed-item.m-2-6 {
+    width: 33.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-3-6,
+  .ed-item.m-3-6 {
+    width: 50%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-4-6,
+  .ed-item.m-4-6 {
+    width: 66.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-5-6,
+  .ed-item.m-5-6 {
+    width: 83.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .m-6-6,
+  .ed-item.m-6-6 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  /* line 145, dev/scss/components/_core.scss */
+  .l-5,
+  .ed-item.l-5 {
+    width: 5%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-10,
+  .ed-item.l-10 {
+    width: 10%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-15,
+  .ed-item.l-15 {
+    width: 15%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-20,
+  .ed-item.l-20 {
+    width: 20%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-25,
+  .ed-item.l-25 {
+    width: 25%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-30,
+  .ed-item.l-30 {
+    width: 30%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-35,
+  .ed-item.l-35 {
+    width: 35%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-40,
+  .ed-item.l-40 {
+    width: 40%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-45,
+  .ed-item.l-45 {
+    width: 45%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-50,
+  .ed-item.l-50 {
+    width: 50%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-55,
+  .ed-item.l-55 {
+    width: 55%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-60,
+  .ed-item.l-60 {
+    width: 60%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-65,
+  .ed-item.l-65 {
+    width: 65%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-70,
+  .ed-item.l-70 {
+    width: 70%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-75,
+  .ed-item.l-75 {
+    width: 75%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-80,
+  .ed-item.l-80 {
+    width: 80%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-85,
+  .ed-item.l-85 {
+    width: 85%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-90,
+  .ed-item.l-90 {
+    width: 90%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-95,
+  .ed-item.l-95 {
+    width: 95%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .l-100,
+  .ed-item.l-100 {
+    width: 100%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-1-3,
+  .ed-item.l-1-3 {
+    width: 33.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-2-3,
+  .ed-item.l-2-3 {
+    width: 66.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-3-3,
+  .ed-item.l-3-3 {
+    width: 100%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-1-6,
+  .ed-item.l-1-6 {
+    width: 16.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-2-6,
+  .ed-item.l-2-6 {
+    width: 33.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-3-6,
+  .ed-item.l-3-6 {
+    width: 50%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-4-6,
+  .ed-item.l-4-6 {
+    width: 66.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-5-6,
+  .ed-item.l-5-6 {
+    width: 83.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .l-6-6,
+  .ed-item.l-6-6 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-5,
+  .ed-item.xl-5 {
+    width: 5%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-10,
+  .ed-item.xl-10 {
+    width: 10%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-15,
+  .ed-item.xl-15 {
+    width: 15%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-20,
+  .ed-item.xl-20 {
+    width: 20%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-25,
+  .ed-item.xl-25 {
+    width: 25%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-30,
+  .ed-item.xl-30 {
+    width: 30%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-35,
+  .ed-item.xl-35 {
+    width: 35%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-40,
+  .ed-item.xl-40 {
+    width: 40%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-45,
+  .ed-item.xl-45 {
+    width: 45%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-50,
+  .ed-item.xl-50 {
+    width: 50%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-55,
+  .ed-item.xl-55 {
+    width: 55%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-60,
+  .ed-item.xl-60 {
+    width: 60%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-65,
+  .ed-item.xl-65 {
+    width: 65%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-70,
+  .ed-item.xl-70 {
+    width: 70%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-75,
+  .ed-item.xl-75 {
+    width: 75%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-80,
+  .ed-item.xl-80 {
+    width: 80%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-85,
+  .ed-item.xl-85 {
+    width: 85%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-90,
+  .ed-item.xl-90 {
+    width: 90%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-95,
+  .ed-item.xl-95 {
+    width: 95%;
+  }
+  /* line 145, dev/scss/components/_core.scss */
+  .xl-100,
+  .ed-item.xl-100 {
+    width: 100%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-1-3,
+  .ed-item.xl-1-3 {
+    width: 33.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-2-3,
+  .ed-item.xl-2-3 {
+    width: 66.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-3-3,
+  .ed-item.xl-3-3 {
+    width: 100%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-1-6,
+  .ed-item.xl-1-6 {
+    width: 16.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-2-6,
+  .ed-item.xl-2-6 {
+    width: 33.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-3-6,
+  .ed-item.xl-3-6 {
+    width: 50%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-4-6,
+  .ed-item.xl-4-6 {
+    width: 66.66667%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-5-6,
+  .ed-item.xl-5-6 {
+    width: 83.33333%;
+  }
+  /* line 152, dev/scss/components/_core.scss */
+  .xl-6-6,
+  .ed-item.xl-6-6 {
+    width: 100%;
+  }
+}
+
+/* line 152, dev/scss/components/_helpers.scss */
+.to-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 157, dev/scss/components/_helpers.scss */
+.to-left {
+  float: left;
+  width: auto;
+  margin-right: 1em;
+}
+
+/* line 158, dev/scss/components/_helpers.scss */
+.to-right {
+  float: right;
+  width: auto;
+  margin-left: 1em;
+}
+
+/* line 159, dev/scss/components/_helpers.scss */
+.full {
+  max-width: 100%;
+}
+
+/* line 160, dev/scss/components/_helpers.scss */
+.circle {
+  border-radius: 50%;
+}
+
+/* line 42, dev/scss/components/_helpers.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  width: 100%;
+  display: table;
+  clear: both;
+}
+
+/* line 19, dev/scss/components/_helpers.scss */
+.no-padding.ed-container > .ed-item {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+/* line 163, dev/scss/components/_helpers.scss */
+.no-padding.ed-item {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+/* line 164, dev/scss/components/_helpers.scss */
+.padding {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+
+/* line 165, dev/scss/components/_helpers.scss */
+.padding-2 {
+  padding-left: 1.875em;
+  padding-right: 1.875em;
+}
+
+/* line 166, dev/scss/components/_helpers.scss */
+.padding-3 {
+  padding-left: 2.8125em;
+  padding-right: 2.8125em;
+}
+
+/* line 167, dev/scss/components/_helpers.scss */
+body.sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+/* line 147, dev/scss/components/_helpers.scss */
+body.sticky-footer > footer {
+  margin-top: auto;
+}
+
+/* line 312, dev/scss/components/_flexbox.scss */
+.main-justify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 313, dev/scss/components/_flexbox.scss */
+.main-distribute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* line 314, dev/scss/components/_flexbox.scss */
+.main-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 315, dev/scss/components/_flexbox.scss */
+.main-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* line 316, dev/scss/components/_flexbox.scss */
+.main-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 317, dev/scss/components/_flexbox.scss */
+.cross-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+/* line 318, dev/scss/components/_flexbox.scss */
+.cross-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* line 319, dev/scss/components/_flexbox.scss */
+.cross-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+/* line 320, dev/scss/components/_flexbox.scss */
+.flex-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+/* line 321, dev/scss/components/_flexbox.scss */
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 322, dev/scss/components/_flexbox.scss */
+.flex-column-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+/* line 323, dev/scss/components/_flexbox.scss */
+.abcenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+/* line 60, dev/scss/components/_visibility.scss */
+.from-s {
+  display: none;
+}
+
+/* line 61, dev/scss/components/_visibility.scss */
+.to-s {
+  display: none;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 60, dev/scss/components/_visibility.scss */
+  .from-m {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* line 61, dev/scss/components/_visibility.scss */
+  .to-m {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 60, dev/scss/components/_visibility.scss */
+  .from-l {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 61, dev/scss/components/_visibility.scss */
+  .to-l {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  /* line 60, dev/scss/components/_visibility.scss */
+  .from-xl {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 61, dev/scss/components/_visibility.scss */
+  .to-xl {
+    display: none;
+  }
+}
+
+/* line 7, dev/scss/components/_css-helpers.scss */
+.ed-video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+/* line 26, dev/scss/components/_video.scss */
+.ed-video > iframe,
+.ed-video > video,
+.ed-video > .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, dev/scss/components/_css-helpers.scss */
+.button {
+  background: #ddd;
+  color: #333;
+}
+
+/* line 15, dev/scss/components/_buttons.scss */
+.button:hover {
+  background: #d0d0d0;
+  text-decoration: none;
+}
+
+/* line 20, dev/scss/components/_buttons.scss */
+.button:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+/* line 8, dev/scss/components/_header.scss */
+.logo {
+  color: #EAAC00;
+  font-family: "karatemedium", sans serif;
+  text-align: left;
+  text-shadow: 1px 1px rgba(68, 68, 68, 0.9);
+  text-transform: uppercase;
+}
+
+/* line 15, dev/scss/components/_header.scss */
+.logo:before {
+  content: "";
+  background: url("../../img/logo-karate.png");
+  background-repeat: no-repeat;
+  padding: 0px 0 10px 0;
+}
+
+/* line 21, dev/scss/components/_header.scss */
+.logo span {
+  color: #221D48;
+  font-weight: 600;
+  text-shadow: 1px 1px rgba(204, 204, 204, 0.9);
+}
+
+@media screen and (max-width: 639px) {
+  /* line 8, dev/scss/components/_header.scss */
+  .logo {
+    font-size: 1.6em;
+  }
+  /* line 28, dev/scss/components/_header.scss */
+  .logo:before {
+    content: "";
+    background: url("../../img/logo-karate.png");
+    background-repeat: no-repeat;
+    padding: 0 36px 23px 36px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* line 8, dev/scss/components/_header.scss */
+  .logo {
+    font-size: 2em;
+    line-height: 1em;
+    margin: .3em 0 0;
+    padding: .5em 0 0 .5em;
+  }
+  /* line 42, dev/scss/components/_header.scss */
+  .logo:before {
+    content: "";
+    background: url("../../img/logo-karate.png");
+    background-repeat: no-repeat;
+    padding: 8px 36px 23px 36px;
+  }
+}
+
+/* line 51, dev/scss/components/_header.scss */
+.subtitle {
+  font-family: "Open Sans", sans serif;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+  margin: .6em 0 0 2em;
+  opacity: .8;
+  text-align: left;
+  text-shadow: 1px 1px rgba(85, 85, 85, 0.5);
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 51, dev/scss/components/_header.scss */
+  .subtitle {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 51, dev/scss/components/_header.scss */
+  .subtitle {
+    font-size: 1em;
+    margin: .7em 0 0 4.5em;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 72, dev/scss/components/_header.scss */
+  header {
+    height: 5.5em;
+  }
+  /* line 76, dev/scss/components/_header.scss */
+  .logo {
+    line-height: .6em;
+    margin-top: .9em;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*background: linear-gradient(
+              $color1 100%,
+              transparent 100%
+  );*/
+  /* line 91, dev/scss/components/_header.scss */
+  header {
+    padding-bottom: 1em;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* line 98, dev/scss/components/_header.scss */
+.sociales__header {
+  text-align: center;
+  padding-top: .1em;
+}
+
+/* line 101, dev/scss/components/_header.scss */
+.sociales__header p {
+  font-size: 1.1em;
+  font-family: "Roboto Condensed", sans serif;
+  padding: .35em .5em 0 0;
+}
+
+/* line 107, dev/scss/components/_header.scss */
+.sociales__small {
+  font-size: .9em;
+  color: #EAAC00;
+  background: #9e7400;
+  display: inline-block;
+  margin: .3em;
+  border-radius: 50%;
+  padding: .3em;
+}
+
+/* line 115, dev/scss/components/_header.scss */
+.sociales__small:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nMrfajfqx5pse9BUPMmpr-I.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url(https://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsNxB8OB85xaNTJvVSB9YUjQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'karatemedium';
+  src: url("../../font/karate-webfont.woff2") format("woff2"), url("../../font/karate-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (min-width: 640px) {
+  /* line 2, dev/scss/components/_banner.scss */
+  .banner {
+    margin-bottom: 1em;
+    position: relative;
+  }
+}
+
+/* line 1, dev/scss/components/_servicios.scss */
+.servicios {
+  margin-bottom: 2em;
+}
+
+/* line 7, dev/scss/components/_servicios.scss */
+.servicio {
+  text-align: center;
+}
+
+/* line 10, dev/scss/components/_servicios.scss */
+.servicio__img {
+  width: 5em;
+  height: 5em;
+  opacity: .7;
+}
+
+@media screen and (min-width: 640px) {
+  /* line 10, dev/scss/components/_servicios.scss */
+  .servicio__img {
+    width: 33%;
+    margin-bottom: 1em;
+  }
+}
+
+/* line 24, dev/scss/components/_servicios.scss */
+.servicio__title {
+  margin: .3em 0;
+}
+
+/* line 27, dev/scss/components/_servicios.scss */
+.servicio__description {
+  font-size: .8em;
+}
+
+/* line 1, dev/scss/components/_modulos.scss */
+.section-title {
+  text-align: center;
+  font-weight: 400;
+  font-family: "Open Sans", sans serif;
+  margin: 0 0 1.5em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+/* line 10, dev/scss/components/_modulos.scss */
+.section-title span {
+  display: block;
+  font-size: .5em;
+}
+
+/* line 1, dev/scss/components/_clientes.scss */
+.clientes {
+  margin-bottom: 2em;
+}
+
+/* line 4, dev/scss/components/_clientes.scss */
+.clientes__title {
+  font-weight: 400;
+  border-bottom: 1px solid rgba(34, 29, 72, 0.3);
+  margin-bottom: 0;
+}
+
+/* line 10, dev/scss/components/_clientes.scss */
+.clientes__nav {
+  width: 20%;
+  height: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 10, dev/scss/components/_clientes.scss */
+  .clientes__nav {
+    width: 30%;
+  }
+}
+
+/* line 19, dev/scss/components/_clientes.scss */
+.clientes__nav__item {
+  width: 50%;
+  height: 2em;
+  opacity: .6;
+  position: relative;
+}
+
+/* line 25, dev/scss/components/_clientes.scss */
+.clientes__nav__item:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* line 39, dev/scss/components/_clientes.scss */
+.clientes__nav__item--prev {
+  float: left;
+  background: #EAAC00;
+}
+
+/* line 43, dev/scss/components/_clientes.scss */
+.clientes__nav__item--prev:before {
+  border-right: 6px solid #FFFFFF;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+/* line 52, dev/scss/components/_clientes.scss */
+.clientes__nav__item--next {
+  float: right;
+  background: #221D48;
+}
+
+/* line 55, dev/scss/components/_clientes.scss */
+.clientes__nav__item--next:before {
+  border-left: 6px solid #FFFFFF;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+/* line 68, dev/scss/components/_clientes.scss */
+.cliente {
+  text-align: justify;
+  margin-bottom: 2em;
+}
+
+/* line 73, dev/scss/components/_clientes.scss */
+.cliente__img {
+  display: block;
+  margin: auto;
+}
+
+/* line 77, dev/scss/components/_clientes.scss */
+.cliente__title {
+  margin: .3em 0 .3em;
+  font-size: 1em;
+}
+
+/* line 82, dev/scss/components/_clientes.scss */
+.cliente__description {
+  font-size: .8em;
+}
+
+/* line 2, dev/scss/components/_noticias.scss */
+.noticia__img {
+  margin-bottom: 1em;
+}
+
+/* line 6, dev/scss/components/_noticias.scss */
+.noticia__title {
+  text-align: center;
+  font-family: "Open Sans", sans serif;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* line 12, dev/scss/components/_noticias.scss */
+.noticia__title span {
+  display: block;
+  font-size: .8em;
+  line-height: 1em;
+  font-weight: 300;
+}
+
+/* line 23, dev/scss/components/_noticias.scss */
+.noticia__description {
+  font-size: .8em;
+}
+
+/* line 1, dev/scss/components/_footer.scss */
+#footer {
+  background: #EAAC00;
+  color: #fef3db;
+  font-size: .9em;
+  padding: 1em 0;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 1, dev/scss/components/_footer.scss */
+  #footer {
+    text-align: center;
+  }
+}
+
+/* line 12, dev/scss/components/_footer.scss */
+.creditos {
+  margin-bottom: 0;
+  padding-top: .6em;
+}
+
+/* line 18, dev/scss/components/_footer.scss */
+.karate {
+  font-size: 1.2em;
+  font-family: "karatemedium", sans serif;
+}
+
+/* line 25, dev/scss/components/_footer.scss */
+.sociales__item {
+  font-size: 1.2em;
+  color: #EAAC00;
+  background: #9e7400;
+  display: inline-block;
+  margin: .3em;
+  border-radius: 50%;
+  padding: .3em;
+}
+
+/* line 33, dev/scss/components/_footer.scss */
+.sociales__item:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 1, dev/scss/components/_menu.scss */
+.main-menu {
+  width: 100%;
+  /*list-style: none;
+  margin:0;
+  padding:0;*/
+  font-family: "karatemedium", sans serif;
+  text-transform: uppercase;
+}
+
+/* line 80, dev/scss/components/_ed-menu.scss */
+.main-menu, .main-menu ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 87, dev/scss/components/_ed-menu.scss */
+.main-menu li {
+  position: relative;
+  list-style: none;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+/* line 93, dev/scss/components/_ed-menu.scss */
+.main-menu li.parent-submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 97, dev/scss/components/_ed-menu.scss */
+.main-menu li.parent-submenu a {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+/* line 102, dev/scss/components/_ed-menu.scss */
+.main-menu ul {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 106, dev/scss/components/_ed-menu.scss */
+  .main-menu ul.show-submenu {
+    display: block;
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-left: 1em;
+    margin-bottom: .5em;
+  }
+}
+
+/* line 116, dev/scss/components/_ed-menu.scss */
+.main-menu a {
+  display: block;
+  line-height: 3em;
+  padding: 0 1em;
+}
+
+/* line 121, dev/scss/components/_ed-menu.scss */
+.main-menu a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 1, dev/scss/components/_menu.scss */
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* line 129, dev/scss/components/_ed-menu.scss */
+  .main-menu a {
+    text-align: center;
+  }
+  /* line 132, dev/scss/components/_ed-menu.scss */
+  .main-menu .expand {
+    display: none;
+  }
+  /* line 134, dev/scss/components/_ed-menu.scss */
+  .main-menu ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 100%;
+    white-space: nowrap;
+  }
+  /* line 141, dev/scss/components/_ed-menu.scss */
+  .main-menu ul a {
+    text-align: left;
+  }
+  /* line 143, dev/scss/components/_ed-menu.scss */
+  .main-menu ul ul {
+    top: 0;
+    left: 100%;
+  }
+  /* line 150, dev/scss/components/_ed-menu.scss */
+  .main-menu li:hover > ul {
+    display: block;
+  }
+}
+
+/* line 154, dev/scss/components/_ed-menu.scss */
+.main-menu .expand-submenu {
+  position: relative;
+  right: 0;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 154, dev/scss/components/_ed-menu.scss */
+  .main-menu .expand-submenu {
+    display: none;
+  }
+}
+
+/* line 164, dev/scss/components/_ed-menu.scss */
+.main-menu .expand-submenu::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 20%;
+  left: 30%;
+  border-left: 0.45em solid;
+  border-bottom: 0.45em solid;
+  border-radius: 0.24em;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  transition: all .3s;
+}
+
+/* line 178, dev/scss/components/_ed-menu.scss */
+.main-menu .expand-submenu.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 1, dev/scss/components/_menu.scss */
+  .main-menu {
+    background: #FFFFFF;
+    height: 100vh;
+    padding-top: 1em;
+  }
+  /* line 12, dev/scss/components/_menu.scss */
+  .main-menu__link {
+    border-bottom: 1px solid rgba(234, 172, 0, 0.2);
+    box-shadow: 2px 0 0 0 #EAAC00 inset;
+    color: #EAAC00;
+    display: block;
+    font-family: "Open Sans", sans serif;
+    margin: 0 1em .3em;
+    padding: .5em 1em;
+    transition: all .6s;
+    transition-timing-function: ease-out;
+  }
+  /* line 22, dev/scss/components/_menu.scss */
+  .main-menu__link:first-child {
+    margin-top: 0.5em;
+  }
+  /* line 25, dev/scss/components/_menu.scss */
+  .main-menu__link:before {
+    margin-right: 1em;
+  }
+  /* line 29, dev/scss/components/_menu.scss */
+  .main-menu__link:hover {
+    padding-left: 2em;
+    text-decoration: none;
+    color: white;
+    box-shadow: 250px 0 0 0 #EAAC00 inset;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 40, dev/scss/components/_menu.scss */
+  .main-menu__link {
+    color: #EAAC00;
+    font-size: 1.1em;
+    letter-spacing: .05em;
+    line-height: 3em;
+    margin: .3em 0 0;
+    opacity: .8;
+    text-shadow: 1px 1px #555;
+    transition: all .2s;
+    transition-timing-function: ease-in;
+  }
+  /* line 52, dev/scss/components/_menu.scss */
+  .main-menu__link:active {
+    color: #fef3db;
+  }
+  /* line 56, dev/scss/components/_menu.scss */
+  .main-menu__link:hover {
+    opacity: 1;
+    color: #fef3db;
+  }
+  /* line 62, dev/scss/components/_menu.scss */
+  .main-menu__link:before {
+    display: none;
+    margin-right: 1em;
+    padding: 0;
+  }
+}
+
+/* line 75, dev/scss/components/_menu.scss */
+.main-menu__subitem {
+  font-size: .7em;
+  text-align: right;
+}
+
+/* line 86, dev/scss/components/_menu.scss */
+.main-nav {
+  background: #EAAC00;
+  color: #EAAC00;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 86, dev/scss/components/_menu.scss */
+  .main-nav {
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 86, dev/scss/components/_menu.scss */
+  .main-nav {
+    margin-top: 3.5em;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media screen and (max-width: 1023px) and (max-width: 1023px) {
+  /* line 86, dev/scss/components/_menu.scss */
+  .main-nav {
+    position: fixed;
+    transition: all .3s;
+    height: 100vh;
+    z-index: 200;
+    overflow-y: auto;
+    width: 85%;
+    right: -85%;
+  }
+  /* line 230, dev/scss/components/_ed-menu.scss */
+  .main-nav.show-menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 101, dev/scss/components/_menu.scss */
+  .nav-toggle {
+    margin: 2em 0 2em;
+    position: relative;
+    z-index: 300;
+    width: 22.5px;
+    height: 15px;
+    box-shadow: 0 3px #EAAC00 inset;
+    cursor: pointer;
+  }
+  /* line 269, dev/scss/components/_ed-menu.scss */
+  .nav-toggle::after, .nav-toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #EAAC00;
+    bottom: 0;
+  }
+  /* line 279, dev/scss/components/_ed-menu.scss */
+  .nav-toggle::after {
+    bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 1, dev/scss/components/_galeria.scss */
+  .content-box {
+    margin: 1em 0;
+  }
+  /* line 5, dev/scss/components/_galeria.scss */
+  .content-box__title {
+    font-family: "karatemedium", sans serif;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 1, dev/scss/components/_galeria.scss */
+  .content-box {
+    padding-top: 8em;
+  }
+}
+
+/* line 14, dev/scss/components/_galeria.scss */
+.content-box h1 {
+  font-family: "karatemedium", sans serif;
+}
+
+/* line 19, dev/scss/components/_galeria.scss */
+.code {
+  background: #221D48;
+  border-radius: 5px;
+  color: #EAAC00;
+  float: left;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-right: .3em;
+  padding: .4em;
+}
+
+/* line 30, dev/scss/components/_galeria.scss */
+.content-box__item {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 34, dev/scss/components/_galeria.scss */
+.content-box__media {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 40, dev/scss/components/_galeria.scss */
+.content-box__title {
+  transition: background .3s ease-in-out;
+}
+
+/* line 46, dev/scss/components/_galeria.scss */
+.content-box__title--expand {
+  color: #B3B3B3;
+  transition: all .3s ease-in-out;
+}
+
+/* line 53, dev/scss/components/_galeria.scss */
+.content-box__title--expand h1 {
+  color: #000;
+}
+
+/* line 59, dev/scss/components/_galeria.scss */
+.content-box__header {
+  color: #000;
+}
+
+/* line 64, dev/scss/components/_galeria.scss */
+.content-box__overlay {
+  position: absolute;
+  bottom: -101%;
+  left: 0;
+  width: 100%;
+  height: 101%;
+  color: #000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: .5em 0 0 .5em;
+  transition: bottom .5s ease-in-out;
+}
+
+/* line 81, dev/scss/components/_galeria.scss */
+.content-box__overlay h1 {
+  font-size: 1.625em;
+  line-height: 1.92308em;
+}
+
+/* line 85, dev/scss/components/_galeria.scss */
+.content-box__overlay p {
+  font-size: .875em;
+  line-height: 1.78571em;
+}
+
+/* line 90, dev/scss/components/_galeria.scss */
+.content-box__icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3.25em;
+  height: 3.25em;
+  line-height: 4em;
+  background: rgba(254, 243, 219, 0.5);
+  text-align: center;
+  transition: background .3s ease-in-out;
+}
+
+/* line 103, dev/scss/components/_galeria.scss */
+.content-box__icon i {
+  color: #000;
+  font-size: 200%;
+  transition: color .3s ease-in-out;
+}
+
+/* line 110, dev/scss/components/_galeria.scss */
+.content-box__item:hover .content-box__title--expand {
+  background: #FFCF21;
+  color: #000;
+}
+
+/* line 114, dev/scss/components/_galeria.scss */
+.content-box__item:hover .content-box__title {
+  background: #FFCF21;
+}
+
+/* line 117, dev/scss/components/_galeria.scss */
+.content-box__item:hover .content-box__overlay {
+  bottom: 0;
+}
+
+/* line 120, dev/scss/components/_galeria.scss */
+.content-box__item:hover .content-box__overlay > div {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+/* line 124, dev/scss/components/_galeria.scss */
+.content-box__item:hover .content-box__icon {
+  background: #000;
+}
+
+/* line 127, dev/scss/components/_galeria.scss */
+.content-box__item:hover .content-box__icon i {
+  color: #fff;
+}
+
+/* line 130, dev/scss/components/_galeria.scss */
+.content-box__container {
+  display: table;
+}
+
+/* line 1, dev/scss/components/_productos.scss */
+.productos {
+  margin-bottom: 2em;
+}
+
+/* line 4, dev/scss/components/_productos.scss */
+.producto {
+  position: relative;
+}
+
+/* line 10, dev/scss/components/_productos.scss */
+.producto__title1, .producto__title2, .producto__title3, .producto__title4 {
+  margin: 0;
+  line-height: 3em;
+  text-align: center;
+}
+
+/* line 14, dev/scss/components/_productos.scss */
+.producto__title1 span, .producto__title2 span, .producto__title3 span, .producto__title4 span {
+  padding-left: .2em;
+  font-weight: 300;
+  font-size: .9em;
+}
+
+/* line 20, dev/scss/components/_productos.scss */
+.producto__title1 {
+  background: yellow;
+}
+
+/* line 23, dev/scss/components/_productos.scss */
+.producto__title2 {
+  background: red;
+}
+
+/* line 26, dev/scss/components/_productos.scss */
+.producto__title3 {
+  background: green;
+}
+
+/* line 29, dev/scss/components/_productos.scss */
+.producto__title4 {
+  background: blue;
+}
+
+/* line 36, dev/scss/components/_productos.scss */
+.producto__item {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+}
+
+/* line 43, dev/scss/components/_productos.scss */
+.producto__item:hover img {
+  transition: all 1.2s;
+  -webkit-transform: scale(1.3) rotate(-5deg);
+          transform: scale(1.3) rotate(-5deg);
+  -webkit-filter: sepia(0.5);
+          filter: sepia(0.5);
+}
+
+/* line 48, dev/scss/components/_productos.scss */
+.producto__item:hover:after {
+  opacity: 1;
+  top: 0;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+
+/* line 55, dev/scss/components/_productos.scss */
+.producto__item:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all .6s;
+  transition-delay: .6s;
+  box-shadow: 0 -1px 0 0 rgba(51, 51, 51, 0.9) inset;
+}
+
+/* line 67, dev/scss/components/_productos.scss */
+.producto__item:hover:after {
+  box-shadow: 0 -100px 0 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+/* line 72, dev/scss/components/_productos.scss */
+.producto__description {
+  left: 0;
+  bottom: 10em;
+  width: 100%;
+  height: 101%;
+  color: #000;
+  background: #fff;
+  transition: all .5s ease-in;
+}
+
+/* line 83, dev/scss/components/_productos.scss */
+.producto__description:hover {
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* line 98, dev/scss/components/_productos.scss */
+.duracion {
+  font-size: .7em;
+}
+
+/* line 102, dev/scss/components/_productos.scss */
+.lista-clases {
+  float: left;
+  width: 25%;
+  padding: .6em;
+  position: relative;
+}
+
+/* line 109, dev/scss/components/_productos.scss */
+.lista-clases__img {
+  opacity: .4;
+}
+
+/* line 112, dev/scss/components/_productos.scss */
+.lista-clases__img:hover {
+  left: -100px;
+  opacity: .8;
+}
+
+/* line 116, dev/scss/components/_productos.scss */
+.item_clases {
+  position: absolute;
+  padding: 1em 0 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 127, dev/scss/components/_productos.scss */
+.item-clases:hover {
+  left: -100px;
+}
+
+/* line 1, dev/scss/components/_slider.scss */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, dev/scss/components/_slider.scss */
+#sliderproductos {
+  margin: auto;
+  margin-bottom: 1em;
+  outline: 5px solid red;
+  overflow: hidden;
+}
+
+/* line 13, dev/scss/components/_slider.scss */
+#sliderproductos img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1em;
+}
+
+/* line 18, dev/scss/components/_slider.scss */
+#sliderproductos section {
+  float: left;
+  width: 25%;
+}
+
+/* line 22, dev/scss/components/_slider.scss */
+#sliderproductos ul {
+  list-style: none;
+}
+
+/* line 25, dev/scss/components/_slider.scss */
+#sliderproductos h2 {
+  text-shadow: none;
+  font-size: .9em;
+}
+
+/* line 31, dev/scss/components/_slider.scss */
+.slider-inner {
+  width: 400%;
+  display: table;
+}
+
+/* line 2, dev/scss/components/_home.scss */
+.main-content p {
+  font-size: 1.2em;
+  line-height: 2em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 10, dev/scss/components/_home.scss */
+  .bg-full {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  /* line 15, dev/scss/components/_home.scss */
+  .sectionfull {
+    width: 100vw;
+    height: 100vh;
+  }
+  /* line 20, dev/scss/components/_home.scss */
+  h2.title {
+    font-family: "karatemedium", sans serif;
+    font-size: 2em;
+    padding-top: 2em;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 32, dev/scss/components/_home.scss */
+  .main-content p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  /* line 38, dev/scss/components/_home.scss */
+  h2.title {
+    font-family: "karatemedium", sans serif;
+    font-size: 2em;
+    padding: 1em 0;
+  }
+}
+
+/* line 1, dev/scss/components/_club.scss */
+.club {
+  font-family: "Roboto Condensed", sans serif;
+  text-align: center;
+}
+
+/* line 4, dev/scss/components/_club.scss */
+.club__sep {
+  margin-bottom: 2em;
+}
+
+/* line 6, dev/scss/components/_club.scss */
+.club__sep:first-child {
+  margin-top: 3em;
+}
+
+/* line 13, dev/scss/components/_club.scss */
+.club__title {
+  font-family: "karatemedium", sans serif;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+/* line 18, dev/scss/components/_club.scss */
+.club__description {
+  line-height: 1em;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 1, dev/scss/components/_club.scss */
+  .club {
+    margin-top: 1em;
+  }
+}
+
+/* line 27, dev/scss/components/_club.scss */
+.description__span {
+  font-family: "Open Sans", sans serif;
+  font-size: .75em;
+  line-height: 0;
+}
+
+/* line 1, dev/scss/components/_contacto.scss */
+.google-map {
+  box-sizing: border-box;
+  display: block;
+  height: 100vh;
+  padding-top: 6em;
+  width: 98.7vw;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 1, dev/scss/components/_login.scss */
+  .login {
+    height: 100vh;
+    padding: 10em 0;
+    text-align: center;
+  }
+}
+
+/* line 7, dev/css/estilos.scss */
+body {
+  font-family: "Open Sans", sans serif;
+  position: relative;
+}
+
+/* line 12, dev/css/estilos.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 14, dev/css/estilos.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 21, dev/css/estilos.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 26, dev/css/estilos.scss */
+tr {
+  background-color: #FFFFFF;
+  border-bottom: solid 1px rgba(234, 172, 0, 0.2);
+  font-size: .9em;
+  height: 3em;
+}
+
+/* line 32, dev/css/estilos.scss */
+tr:hover {
+  background-color: #EAAC00;
+  color: #fef3db;
+}
+
+/* line 37, dev/css/estilos.scss */
+tr:nth-child(even) {
+  background-color: #fef3db;
+}
+
+/* line 39, dev/css/estilos.scss */
+tr:nth-child(even):hover {
+  background-color: #EAAC00;
+}
+
+/* line 45, dev/css/estilos.scss */
+td {
+  text-align: center;
+}
+
+/* line 50, dev/css/estilos.scss */
+.clases__title {
+  background-color: #EAAC00;
+  height: 5em;
+  text-transform: uppercase;
+}
+
+/* line 55, dev/css/estilos.scss */
+.clases__button {
+  background: #EAAC00;
+  color: white;
+  border-radius: .25em;
+  margin: auto 0 auto;
+}
+
+/* line 15, dev/scss/components/_buttons.scss */
+.clases__button:hover {
+  background: #d19900;
+  text-decoration: none;
+}
+
+/* line 20, dev/scss/components/_buttons.scss */
+.clases__button:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+/* line 58, dev/css/estilos.scss */
+.clases__button:hover {
+  background-color: #fef3db;
+  color: #EAAC00;
+}
+
+/* line 64, dev/css/estilos.scss */
+.selector1 {
+  background: #EAAC00;
+  color: #fef3db;
+  border-radius: .25em;
+}
+
+/* line 15, dev/scss/components/_buttons.scss */
+.selector1:hover {
+  background: #d19900;
+  text-decoration: none;
+}
+
+/* line 20, dev/scss/components/_buttons.scss */
+.selector1:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+/* line 70, dev/css/estilos.scss */
+::-moz-selection {
+  background: transparent;
+}
+::selection {
+  background: transparent;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?67164217");
+  src: url("../font/fontello.eot?67164217#iefix") format("embedded-opentype"), url("../font/fontello.woff2?67164217") format("woff2"), url("../font/fontello.woff?67164217") format("woff"), url("../font/fontello.ttf?67164217") format("truetype"), url("../font/fontello.svg?67164217#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?67164217#fontello') format('svg');
+  }
+}
+*/
+/* line 96, dev/css/estilos.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 131, dev/css/estilos.scss */
+.icon-mail:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 132, dev/css/estilos.scss */
+.icon-emo-thumbsup:before {
+  content: '\e804';
+  margin-right: .5em;
+}
+
+/* '' */
+/* line 133, dev/css/estilos.scss */
+.icon-down-open-big:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 134, dev/css/estilos.scss */
+.icon-left-open-big:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 135, dev/css/estilos.scss */
+.icon-right-open-big:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 136, dev/css/estilos.scss */
+.icon-up-open-big:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 137, dev/css/estilos.scss */
+.icon-cog-alt:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 138, dev/css/estilos.scss */
+.icon-heart:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 139, dev/css/estilos.scss */
+.icon-heart-1:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 140, dev/css/estilos.scss */
+.icon-heart-filled:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 141, dev/css/estilos.scss */
+.icon-ok:before {
+  content: '\e80f';
+}
+
+/* '' */
+/* line 142, dev/css/estilos.scss */
+.icon-cancel:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 143, dev/css/estilos.scss */
+.icon-thumbs-up:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 144, dev/css/estilos.scss */
+.icon-thumbs-down:before {
+  content: '\e812';
+}
+
+/* '' */
+/* line 145, dev/css/estilos.scss */
+.icon-location:before {
+  content: '\e815';
+}
+
+/* '' */
+/* line 146, dev/css/estilos.scss */
+.icon-direction:before {
+  content: '\e816';
+}
+
+/* '' */
+/* line 147, dev/css/estilos.scss */
+.icon-users:before {
+  content: '\e817';
+}
+
+/* '' */
+/* line 148, dev/css/estilos.scss */
+.icon-twitter:before {
+  content: '\f099';
+}
+
+/* '' */
+/* line 149, dev/css/estilos.scss */
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+/* '' */
+/* line 150, dev/css/estilos.scss */
+.icon-menu:before {
+  content: '\f0c9';
+}
+
+/* '' */
+/* line 151, dev/css/estilos.scss */
+.icon-food:before {
+  content: '\f0f5';
+}
+
+/* '' */
+/* line 152, dev/css/estilos.scss */
+.icon-female:before {
+  content: '\f182';
+}
+
+/* '' */
+/* line 153, dev/css/estilos.scss */
+.icon-male:before {
+  content: '\f183';
+}
+
+/* '' */
+/* line 154, dev/css/estilos.scss */
+.icon-wheelchair:before {
+  content: '\f193';
+}
+
+/* '' */
+/* line 155, dev/css/estilos.scss */
+.icon-birthday:before {
+  content: '\f1fd';
+}
+
+/* '' */
+/* line 156, dev/css/estilos.scss */
+.icon-facebook-squared:before {
+  content: '\f308';
+}
+
+/* '' */
+/* line 157, dev/css/estilos.scss */
+.icon-instagram:before {
+  content: '\f32d';
+}
+
+/* '' */

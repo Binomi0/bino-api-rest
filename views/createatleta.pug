@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="es-ES")
+    head
+        title= title
+    body
+        h1 Inscribir atleta
+        form(action="/api/club/590a7d9c80c34920745f7b8a" method="post")
+            input(type="text" name="nombre" placeholder="Nombre del atleta" required)
+            br
+            input(type="text" name="cinturon" placeholder="Cinturón" required)
+            br
+            input(type="text" name="edad" placeholder="Edad" required)
+            br
+            input(type="text" name="discapacidad" placeholder="Discapacidad")
+            br           
+            select(name="categoria")
+                each categoria in ['Kata Adaptado', 'Kata Élite', 'Kata Equipos', 'Kata Promoción', 'Kumite Individual', 'Kumite Equipos']
+                    option(value=categoria) #{categoria}
+            if (categoria)
+            select(name="subcategoria")
+                each subcategoria in ['alevin', 'juvenil', 'veterano']
+                    option(value=subcategoria) #{subcategoria}                    
+            input(type="submit")

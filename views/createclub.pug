@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="es-ES")
+    head
+        title= title
+    body
+        h1 Inscribir club
+        form(action="/api/club" method="post")
+            input(type="text" name="club" placeholder="Nombre del Club" required)
+            br
+            input(type="text" name="domicilio" placeholder="Domicilio (calle, ciudad y código postal)" required)
+            br
+            input(type="email" name="email" placeholder="Correo electrónico" required)
+            br
+            input(type="text" name="dtecnico" placeholder="Director Técnico" required)
+            br 
+            input(type="email" name="emailtecnico" placeholder="Correo electrónico Dtor. Técnico" required)
+            br
+            input(type="text" name="federacion" placeholder="Federación" required)
+            br
+            input(type="submit" value="Crear Club")
