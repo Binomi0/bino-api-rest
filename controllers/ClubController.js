@@ -3,44 +3,57 @@ var Club = require('../models/Club')
 module.exports = {
     
     find: function(params, callback){
-        Club.find(params, function(err, clubs){
+        Club.find(params, function(err, result){
             if(err){
                 callback(err, null);
                 return
             }
 
-            callback(null, clubs)
+            callback(null, result)
         })
     },
 
     findById: function(id, callback){
-        Club.findById(id, function (err, clubs){
+        Club.findById(id, function (err, result){
             if(err){
                 callback(err, null)
                 return
             }
 
-            callback(null, clubs)
+            callback(null, result)
         })
     },
 
     create: function(params, callback){        
-        Club.create(params, function(err, club){
+        Club.create(params, function(err, result){
             if(err){
                 callback(err, null)
                 return
             }
 
-            callback(null, club)
+            callback(null, result)
         })
     },
 
     update: function(id, params, callback){
-        Club.findByIdAndUpdate(id, params, {new:true}, function(err, club){
+        Club.findByIdAndUpdate(id, params, {new:true}, function(err, result){
             if(err){
                 callback(err, null)
                 return
             }
+
+            callback(null, result)
+        })
+    },
+
+
+    modify: function(codigo, params, callback){
+        Club.findOneAndUpdate({ 'codigo': codigo }, { $push: { 'participantes': params }}, {  new: true },function(err, result) {
+            if(err){
+                callback(err, null)
+                return
+            }
+            callback(null, result)
         })
     },
 

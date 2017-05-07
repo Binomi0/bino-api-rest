@@ -1,20 +1,15 @@
 var mongoose = require('mongoose')
 
-var clubSchema = new mongoose.Schema({
+var clubSchema = new mongoose.Schema ({
+    activado: {type:Boolean, default: false},
+    codigo: {type:Number, default:0},
     club: {type:String, default: ''},
     domicilio: {type:String, default:''},
     email: {type:String, default:''},
     dtecnico: {type:String, default:''},
     emailtecnico: {type:String, default:''},
     federacion: {type:String, default:''},
-    participantes: {
-        nombre: {type:String, default: ''},
-        cinturon: {type:String, default:''},
-        edad: {type:Number, default:0},
-        discapacidad: {type:String, default:''},
-        categoria:{type:String, default:''},
-        subcategoria:{type:String, default:''}
-    },
+    participantes: {type:Array, default: []},
     timestamp: {type:Date, default:Date.now}
 })
 

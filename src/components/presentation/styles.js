@@ -2,6 +2,10 @@ export default {
     universal: {
 
     },
+    clubStyle: {
+
+    },
+    
     comment: {
         commentBox: {
             padding:12,
@@ -14,10 +18,8 @@ export default {
     },
     zone: {
         container: {
-            padding:16,
-            background:'f9f9f9',
-            marginTop:12,
-            border:'1px solid #ddd'
+            padding:3,
+            marginTop:0,
         },   
         header: {
             marginTop:0,
@@ -26,6 +28,17 @@ export default {
         title: {
             textDecoration:'none',
             color:'red'
+        },
+        club: {
+            active: {
+                color: 'orange',
+                fontSize: '.5em',
+                lineHeight: '.5em'
+            },
+            inactive: {
+                fontSize: '.5em',
+                lineHeight: '.5em'
+            }
         }
     }
     

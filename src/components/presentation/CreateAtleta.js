@@ -8,6 +8,9 @@ class CreateAtleta extends Component {
 
             }
         }
+
+        this.updateAtleta = this.updateAtleta.bind(this)
+        this.submitAtleta = this.submitAtleta.bind(this)
     }
 
     updateAtleta(event){
@@ -25,6 +28,7 @@ class CreateAtleta extends Component {
     render(){
         return (
             <div>
+                <p>Código del equipo: {this.props.codigo}</p>
                 <input id="title" onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Titulo"/>            
                 <input id="title" onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Titulo"/>            
                 <input id="title" onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Titulo"/>            

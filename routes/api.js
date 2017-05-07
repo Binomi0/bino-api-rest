@@ -1,7 +1,15 @@
 var express = require('express')
 var router = express.Router()
+//var auth = require('../middlewares/auth')
 var controllers = require('../controllers')
-console.log(controllers['club'])
+
+router.get('/', function(req, res, next){
+    res.send('Bienvenido a la API del club de Karate Gymnoray')
+})
+var usercontrol = controllers['user']
+router.post('/signup', usercontrol.signUp)
+router.post('/signin', usercontrol.signIn)
+
 router.get('/:resource', function(req, res, next) {
 
     var resource = req.params.resource
@@ -68,6 +76,7 @@ router.post('/:resource', function(req,res, next){
 
     var resource = req.params.resource
     var controller = controllers[resource]
+
     if (controller == null ){
         res.json({
             confirmation: 'fallo',
@@ -76,25 +85,49 @@ router.post('/:resource', function(req,res, next){
         return
     }
 
-    controller.create(req.body, function(err, result){
+    controller.find({ 'email': req.body.email }, function(err, result){
         if(err){
             res.json({
-                confirmation: 'fail',
+                confirmation: 'Fail!!!',
                 message: err
             })
             return
         }
+        if (result.length >= 1) {
+            res.json({
+                confirmation: 'Error, Ya existe un usuario registrado con ese correo electrónico',
+                resultado: req.body.email
+            })
+            return
+        } else {
+            if (req.body.email === null) {
+                res.json({
+                    confirmacion: 'No ha introducido correo electrónico',
+                    result
+                })
+            } else {
+                controller.create(req.body, function(err, result){
+                    if(err){
+                        res.json({
+                            confirmation: 'fail',
+                            message: err
+                        })
+                        return
+                    }
 
-        res.json({
-            confirmation: 'success',
-            result
-        })
-    })
+                    res.json({
+                        confirmation: 'success',
+                        result
+                    })
+                })   
+            }            
+        }
+    }); 
 })
 
-router.post('/:resource/:id', function(req,res, next){
+router.post('/:resource/:codigo', function(req, res, next){
     var resource = req.params.resource
-    var id = req.params.id
+    var codigo = req.body.codigo
 
     var controller = controllers[resource]
     if (controller == null ){
@@ -104,23 +137,42 @@ router.post('/:resource/:id', function(req,res, next){
         })
         return
     }
-
-    controller.findById(id, function(err, result){
+    controller.find({ 'codigo': req.body.codigo}, function(err, result){
         if(err){
-            res.json({
-                confirmation: 'fail',
-                message: err
-            })
+            console.log('Ha ocurrido un error en la búsqueda del codigo :', req.body.codigo)
             return
         }
-        res.json({      
-            confirmation: 'success',
-            result
-        })
-        result.participantes = req.body
-        console.log(req.body)
-        result.save();
+        if (result.length >= 1) {
+            console.log('¡Encontrado Club!', req.body.codigo)
+            controller.modify(req.body.codigo, req.body, function(err, result){
+                if(err){
+                    res.json({
+                        confirmation: 'fail',
+                        message: err
+                    })
+                    return
+                }
+                var numeroAtletas = result.participantes.length
+                console.log('Numero de atletas en el club: ', numeroAtletas)                
+                res.json({      
+                    confirmation: 'Añadido nuevo atleta al club',
+                    club: result.club,
+                    result: result.participantes[numeroAtletas-1]
+                })                
+                console.log('RESPUESTA: ', req.body, result)
+                result.participantes = req.body 
+                //res.render('index', { club: req.body.club })               
+            })
+        } else {
+            console.log('INFO: El código de club introducido no existe.', req.body.codigo)
+            res.json({
+                confirmacion: 'No existe un club con esa clave',
+                result
+            })
+        }        
     })
+
+    
 })
 
 

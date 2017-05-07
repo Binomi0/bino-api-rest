@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="es-ES")
+    head
+        title= title
+    
+    body        
+        h1 Añadir Participante 
+        form(action="/api/club/" method="post")        
+            input(type="text", name="codigo", id="clave" placeholder="Código del club" required)
+            br
+            input(type="text" name="nombre" placeholder="Nombre del Participante" required)
+            br
+            input(type="text" name="cinturon" placeholder="Cinturón" required)
+            br
+            input(type="text" name="edad" placeholder="Edad" required)
+            br
+            input(type="text" name="discapacidad" placeholder="Tipo de Discapacidad" required)
+            br 
+            input(type="submit" value="Crear Club")
