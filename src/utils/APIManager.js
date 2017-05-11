@@ -42,12 +42,12 @@ export default {
             console.log('POST REQUEST: ', response.body)
             callback(null, response.body)
         })
-    },
+    },    
     put: (url, body, callback) => {
         console.log('URL: ', url, 'BODY: ', body)
         superagent
         .post(url)
-        .send({ inscripcion: body })
+        .send(body)
         .set('Accept', 'application/json')
         .end((err, response) =>{
             if(err){
@@ -58,7 +58,8 @@ export default {
             if(confirmation != 'success'){
                 callback({message: response.body.message}, null)
                 return
-            }
+            }            
+            console.log('PUT REQUEST: ', response.body)
             callback(null, response.body)
         })
     },

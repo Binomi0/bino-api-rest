@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 
 var clubSchema = new mongoose.Schema ({
-    activado: {type:Boolean, default: false},
+    activado: {type:Boolean, default: true},
     codigo: {type:Number, default:0},
     club: {type:String, default: ''},
     domicilio: {type:String, default:''},

@@ -40,33 +40,72 @@ router.get('/:resource', function(req, res, next) {
 
 
 
-router.get('/:resource/:id', function(req, res, next){
+// router.get('/:resource/:id', function(req, res, next){
+
+//     var resource = req.params.resource
+//     var id = req.params.id
+
+//     var controller = controllers[resource]
+//     if (controller == null ){
+//         res.json({
+//             confirmation: 'fallo',
+//             message: 'Recurso no válido: '+resource
+//         })
+//         return
+//     }
+
+//     controller.findById(id, function(err, result){
+//         if (err) {
+//             res.json({
+//                 confirmation: 'fallo',
+//                 message: 'ID no válida: '+id
+//             })
+//             return
+//         }
+
+//         res.json({
+//             confirmation: 'success',
+//             result
+//         })
+//     })
+// })
+
+router.get('/:resource/:codigo', function(req, res, next) {
 
     var resource = req.params.resource
-    var id = req.params.id
-
     var controller = controllers[resource]
-    if (controller == null ){
+    var id = req.params.codigo
+
+    if (controller == null ) {
         res.json({
-            confirmation: 'fallo',
+            confirmation: 'Fallo',
             message: 'Recurso no válido: '+resource
         })
         return
     }
+    if (id == null) {
+        res.json({
+            confirmation: 'Fallo',
+            message: 'Id no válida: '+id
+        })
+        return
+    }
 
-    controller.findById(id, function(err, result){
+    controller.find({ 'codigo': id }, function(err, result) {
         if (err) {
             res.json({
-                confirmation: 'fallo',
-                message: 'ID no válida: '+id
+                confirmacion: 'Fallo',
+                message: `Recurso no válido ${resource}, Id no válida ${id}`
             })
             return
         }
 
-        res.json({
-            confirmation: 'success',
-            result
-        })
+        if (result.length >= 1) {
+            res.json({
+                confirmation: 'success',
+                result
+            })        
+        }
     })
 })
 
@@ -127,8 +166,8 @@ router.post('/:resource', function(req,res, next){
 
 router.post('/:resource/:codigo', function(req, res, next){
     var resource = req.params.resource
-    var codigo = req.body.codigo
-
+    var codigo = req.params.codigo
+    console.log('Recibida peticion con estos parametros', req.body, 'codigo: ', codigo)
     var controller = controllers[resource]
     if (controller == null ){
         res.json({
@@ -137,14 +176,14 @@ router.post('/:resource/:codigo', function(req, res, next){
         })
         return
     }
-    controller.find({ 'codigo': req.body.codigo}, function(err, result){
+    controller.find({ 'codigo': codigo}, function(err, result){
         if(err){
             console.log('Ha ocurrido un error en la búsqueda del codigo :', req.body.codigo)
             return
         }
         if (result.length >= 1) {
-            console.log('¡Encontrado Club!', req.body.codigo)
-            controller.modify(req.body.codigo, req.body, function(err, result){
+            console.log('¡Encontrado Club!', codigo)
+            controller.modify(codigo, req.body, function(err, result){
                 if(err){
                     res.json({
                         confirmation: 'fail',
@@ -155,11 +194,11 @@ router.post('/:resource/:codigo', function(req, res, next){
                 var numeroAtletas = result.participantes.length
                 console.log('Numero de atletas en el club: ', numeroAtletas)                
                 res.json({      
-                    confirmation: 'Añadido nuevo atleta al club',
+                    confirmation: 'success',
                     club: result.club,
                     result: result.participantes[numeroAtletas-1]
                 })                
-                console.log('RESPUESTA: ', req.body, result)
+                console.log('RESPUESTA: ', result)
                 result.participantes = req.body 
                 //res.render('index', { club: req.body.club })               
             })

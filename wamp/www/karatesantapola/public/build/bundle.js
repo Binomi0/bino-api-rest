@@ -1222,7 +1222,7 @@ var CallbackQueue = __webpack_require__(66);
 var PooledClass = __webpack_require__(15);
 var ReactFeatureFlags = __webpack_require__(71);
 var ReactReconciler = __webpack_require__(19);
-var Transaction = __webpack_require__(33);
+var Transaction = __webpack_require__(32);
 
 var invariant = __webpack_require__(1);
 
@@ -2121,7 +2121,7 @@ var _assign = __webpack_require__(4);
 var ReactCurrentOwner = __webpack_require__(12);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(36);
+var canDefineProperty = __webpack_require__(35);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(86);
@@ -2508,7 +2508,7 @@ module.exports = reactProdInvariant;
 
 
 var DOMNamespaces = __webpack_require__(39);
-var setInnerHTML = __webpack_require__(35);
+var setInnerHTML = __webpack_require__(34);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(46);
 var setTextContent = __webpack_require__(84);
@@ -2823,7 +2823,7 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var canDefineProperty = __webpack_require__(36);
+  var canDefineProperty = __webpack_require__(35);
   var ReactElementValidator = __webpack_require__(87);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -2983,7 +2983,7 @@ var firebase=function(e){function t(r){if(n[r])return n[r].exports;var i=n[r]={i
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(30);
+var EventPluginRegistry = __webpack_require__(29);
 var EventPluginUtils = __webpack_require__(40);
 var ReactErrorUtils = __webpack_require__(44);
 
@@ -3537,37 +3537,6 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(10);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _oval = __webpack_require__(119);
-
-var _oval2 = _interopRequireDefault(_oval);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Spinner = function Spinner(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: 'spinner' },
-        _react2.default.createElement('img', { src: _oval2.default })
-    );
-};
-
-exports.default = Spinner;
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -3825,7 +3794,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3843,7 +3812,7 @@ module.exports = EventPluginRegistry;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(30);
+var EventPluginRegistry = __webpack_require__(29);
 var ReactEventEmitterMixin = __webpack_require__(158);
 var ViewportMetrics = __webpack_require__(77);
 
@@ -4158,7 +4127,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4235,7 +4204,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4466,7 +4435,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4594,7 +4563,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4697,7 +4666,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4727,6 +4696,37 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _oval = __webpack_require__(119);
+
+var _oval2 = _interopRequireDefault(_oval);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Spinner = function Spinner(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'spinner' },
+        _react2.default.createElement('img', { src: _oval2.default })
+    );
+};
+
+exports.default = Spinner;
 
 /***/ }),
 /* 37 */
@@ -4824,7 +4824,7 @@ var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(46);
-var setInnerHTML = __webpack_require__(35);
+var setInnerHTML = __webpack_require__(34);
 var setTextContent = __webpack_require__(84);
 
 function getNodeAfter(parentNode, node) {
@@ -6569,7 +6569,7 @@ var _prodInvariant = __webpack_require__(17);
 
 var ReactNoopUpdateQueue = __webpack_require__(54);
 
-var canDefineProperty = __webpack_require__(36);
+var canDefineProperty = __webpack_require__(35);
 var emptyObject = __webpack_require__(22);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -6814,7 +6814,7 @@ var _presentation = __webpack_require__(57);
 
 var _utils = __webpack_require__(59);
 
-var _Spinner = __webpack_require__(29);
+var _Spinner = __webpack_require__(36);
 
 var _Spinner2 = _interopRequireDefault(_Spinner);
 
@@ -6838,105 +6838,101 @@ var Atletas = function (_Component) {
             user: null,
             codigo: null,
             club: {},
-            list: [],
-            update: false
+            list: []
         };
+
+        _this.renderAtletas = _this.renderAtletas.bind(_this);
+        _this.listarAtletas = _this.listarAtletas.bind(_this);
         return _this;
     }
 
     _createClass(Atletas, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
+        key: 'componentWillMount',
+        value: function componentWillMount() {
             var _this2 = this;
 
-            console.log('Ejecutando componentWillMount');
-            _utils.APIManager.get('/api/club/', null, function (err, response) {
-                if (err) {
-                    alert('ERROR: ', err.message);
-                    return;
-                };
-                console.log('Lista de Atletas: ', response.results[0].participantes);
-                var updatedList = response.results[0].participantes;
-                //updatedList.push(response.results)
-                _this2.setState({
-                    list: updatedList
-                });
-                //console.log('Subiendo lista', this.state.list)
-                //console.log('Lista Recibida: ', response)
-            });
             //console.log('Se va a montar el componente Atletas', this.props.codigo)
-            // if (this.state.list.length < 1 ){
-            //     this.setState({
-            //         list: this.props.currentAtleta
-            //     })
-            //     // setTimeout(() => {
-            //     // this.listarAtletas(this.props.codigo)
-            //     // }, 100)            
-            // }
-
-
-            // APIManager.get('/api/club/', null, (err, response) => {
-            //     if(err){
-            //         alert('ERROR: ', err.message)
-            //         return
-            //     };
-            //     //console.log('Lista de Atletas: ', JSON.stringify(response.results))
-            //     let updatedList = response.results[0]
-            //     //updatedList.push(response.results)
-            //     this.setState({
-            //         list: updatedList
-            //     });
-            //console.log('Subiendo lista', this.state.list)
-            //console.log('Lista Recibida: ', response)
-            //})
+            if (this.state.list.length < 1) {
+                this.setState({
+                    list: this.props.currentAtleta
+                });
+                setTimeout(function () {
+                    _this2.listarAtletas(_this2.props.codigo);
+                }, 100);
+            }
         }
     }, {
         key: 'addAtleta',
         value: function addAtleta(atleta, codigo) {
             var _this3 = this;
 
-            console.log('Atleta añadido', atleta, codigo);
-            //let updatedAtleta = Object.assign({}, atleta)
-            _utils.APIManager.put('/api/club/' + codigo, atleta, function (err, response) {
+            //console.log('Recibida peticion para añadir atleta', atleta, codigo)
+            var updatedAtleta = Object.assign({}, atleta);
+            _utils.APIManager.put('/api/club/' + codigo, updatedAtleta, function (err, response) {
                 if (err) {
                     alert('ERROR: ', err.message);
                     return;
                 }
-                console.log('POST CREATED: ', JSON.stringify(response));
+
+                //console.log('POST CREATED: ', JSON.stringify(response.results))
                 var updatedList = Object.assign([], _this3.state.list);
-                updatedList.push(response.result);
+                updatedList.push(response.results);
                 _this3.setState({
-                    list: updatedList,
-                    codigo: codigo,
-                    update: true
+                    list: updatedList
                 });
-                console.log('Lista Recibida: ', response);
+                //console.log('Subiendo lista', this.state.list)
+                //console.log('Lista Recibida: ', response)
             });
-            //listarAtletas(codigo)
+        }
+    }, {
+        key: 'listarAtletas',
+        value: function listarAtletas(codigo) {
+            var _this4 = this;
+
+            //console.log('Ejecutando listarAtletas')
+            _utils.APIManager.get('/api/club/', null, function (err, response) {
+                if (err) {
+                    alert('ERROR: ', err.message);
+                    return;
+                };
+                //console.log('Lista de Atletas: ', JSON.stringify(response.results))
+                var updatedList = response.results[0];
+                //updatedList.push(response.results)
+                _this4.setState({
+                    list: updatedList
+                });
+                //console.log('Subiendo lista', this.state.list)
+                //console.log('Lista Recibida: ', response)
+            });
+        }
+    }, {
+        key: 'renderAtletas',
+        value: function renderAtletas() {
+            //console.log(this.state.list)
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(_presentation.Atleta, { currentAtleta: this.state.list, codigo: this.props.codigo })
+            );
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this4 = this;
-
             //console.log(this.state.list === undefined)
-            console.log(this.state.list.length);
-            var participantes = this.state.list.map(function (atleta, index) {
-                return _react2.default.createElement(
-                    'li',
-                    { key: index },
-                    _react2.default.createElement(_presentation.Atleta, { listaAtletas: atleta, codigo: _this4.props.codigo })
-                );
-            });
+            if (this.state.list === undefined) {
+                //this.actualizarEstado(this.props.currentAtleta)
+                this.renderAtletas();
+            }
+
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_presentation.CreateAtleta, { onCreate: this.addAtleta.bind(this), codigo: this.props.codigo }),
                 _react2.default.createElement(
                     'ol',
                     null,
-                    participantes
-                )
+                    this.renderAtletas()
+                ),
+                _react2.default.createElement(_presentation.CreateAtleta, { onCreate: this.addAtleta.bind(this), codigo: this.props.codigo })
             );
         }
     }]);
@@ -8305,7 +8301,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(18);
 var DOMProperty = __webpack_require__(14);
 var React = __webpack_require__(20);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(30);
 var ReactCurrentOwner = __webpack_require__(12);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMContainerInfo = __webpack_require__(141);
@@ -8321,7 +8317,7 @@ var ReactUpdates = __webpack_require__(11);
 var emptyObject = __webpack_require__(22);
 var instantiateReactComponent = __webpack_require__(82);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(35);
+var setInnerHTML = __webpack_require__(34);
 var shouldUpdateReactComponent = __webpack_require__(51);
 var warning = __webpack_require__(2);
 
@@ -9309,8 +9305,8 @@ module.exports = isTextInputElement;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var escapeTextContentForBrowser = __webpack_require__(34);
-var setInnerHTML = __webpack_require__(35);
+var escapeTextContentForBrowser = __webpack_require__(33);
+var setInnerHTML = __webpack_require__(34);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -9585,7 +9581,7 @@ var ReactElement = __webpack_require__(16);
 
 var checkReactTypeSpec = __webpack_require__(205);
 
-var canDefineProperty = __webpack_require__(36);
+var canDefineProperty = __webpack_require__(35);
 var getIteratorFn = __webpack_require__(89);
 var warning = __webpack_require__(2);
 
@@ -9975,7 +9971,7 @@ var _Login = __webpack_require__(96);
 
 var _Login2 = _interopRequireDefault(_Login);
 
-var _Spinner = __webpack_require__(29);
+var _Spinner = __webpack_require__(36);
 
 var _Spinner2 = _interopRequireDefault(_Spinner);
 
@@ -10011,63 +10007,55 @@ var Home = function (_Component) {
     _createClass(Home, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            //console.log('componentDidMount\n', this.state)
             this.setState({ loading: false });
         }
     }, {
         key: 'isUserauth',
         value: function isUserauth(user) {
-            //console.log('isUserAuth: \n', user)
             if (user == null) {
-                //console.log('User null, Reiniciando componente?', user == null)
-                this.setState({ user: null });
+                console.log('User null, Reiniciando componente?', user == null);
             } else {
-                //console.log('Recibo la respuesta del componente Login con el usuario: ', user)
+                console.log('Recibo la respuesta del componente Login con el usuario: ', user);
                 user !== null ? this.setState({ user: user }) : '';
             }
         }
-
-        // componentWillReceiveProps(nextProps) {
-        //     console.log('componentWillReceiveProps: ', nextProps)
-        //     this.setState({
-        //         club: nextProps.currentAtleta
-        //     })
-        // }
-        // shouldComponentUpdate(nextProps, nextState) {
-        //     //console.log('Should Update?: ', nextProps, 'nextState', nextState)
-        //     if(this.state.loading == true) { return true } else { return false }
-        // }
-
-        // componentWillUpdate(nextProps, nextState){
-        //     this.props = nextProps
-        //     this.state = nextState
-
-        //     // if (this.state.loading == true) {
-        //     //     this.setState({ loading:true })
-        //     // }
-        //     // console.log('Will Update?: ', nextProps, 'nextState', nextState)
-        // }
-        // componentDidUpdate(nextProps, nextState){
-        //     if (this.state.loading == false) {
-        //         this.setState({ loading:false })
-        //     }
-        //     //console.log('Did Update: ', nextProps, 'nextState', nextState)
-        // }
-
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            console.log('nextProps: ', nextProps);
+            this.setState({
+                club: nextProps.currentAtleta
+            });
+        }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps, nextState) {
+            console.log('Should Update?: ', nextProps, 'nextState', nextState);
+            if (!this.state.loading) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }, {
+        key: 'componentWillUpdate',
+        value: function componentWillUpdate(nextProps, nextState) {
+            console.log('Will Update?: ', nextProps, 'nextState', nextState);
+        }
     }, {
         key: 'render',
         value: function render() {
-            console.log('Renderizando Home', this.state.loading);
-            if (this.state.loading) {
-                return _react2.default.createElement(_Spinner2.default, null);
-            } else {
-                return _react2.default.createElement(
+            console.log(!this.state.loading);
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
                     'div',
-                    null,
-                    _react2.default.createElement(_Login2.default, { isUserauth: this.isUserauth.bind(this) }),
-                    !this.state.user ? '' : _react2.default.createElement(_Clubs2.default, { user: this.state.user })
-                );
-            }
+                    { className: 'w3-bar w3-border-bottom bg-spinner' },
+                    _react2.default.createElement(_Login2.default, { isUserauth: this.isUserauth.bind(this) })
+                ),
+                !this.state.user ? '' : _react2.default.createElement(_Clubs2.default, { user: this.state.user })
+            );
         }
     }]);
 
@@ -10253,7 +10241,7 @@ var Clubs = function (_Component) {
             selected: 0,
             list: [],
             activado: false,
-            codigo: null
+            user: props.user
         };
         return _this;
     }
@@ -10263,13 +10251,12 @@ var Clubs = function (_Component) {
         value: function componentWillMount() {
             var _this2 = this;
 
-            console.log('componentWillMount | Clubs');
-            if (!this.props.user) {
+            if (!this.state.user) {
                 console.log('No hay usuario conectado');
             } else {
                 //console.log(this.state.user.email)
-                _utils.APIManager.get('/api/club', { 'email': this.props.user.providerData[0].email }, function (err, response) {
-                    console.log(response);
+                _utils.APIManager.get('/api/club', { 'email': this.state.user.providerData[0].email }, function (err, response) {
+                    //console.log(response)
                     if (err) {
                         alert('ERROR: Ha fallado la conexión al servidor: ', err.message);
                         return;
@@ -10287,31 +10274,11 @@ var Clubs = function (_Component) {
                 });
             }
         }
-
-        // shouldComponentUpdate(nextProps, nextState) {
-        //     //console.log('Create Club Should Update')
-        //     //console.log(!this.state.formCompletado)
-        //     if (!this.state.fullFilled) { return true } else { return false }
-        // }    
-
-        // componentWillUpdate(nextProps, nextState) {   
-        //     //console.log('Will Update: ', state)   
-        //     this.state = nextState
-        // }
-
-        // componentDidUpdate(prevProps, prevState) {                
-        //     //console.log('Se ha actualizado asi: ', '\n' ,prevState, '\n')
-        //     //console.log('El estado final : ', this.state)
-        //     //console.log('Validacion de formulario: ', this.state.docsFilled == 2, this.state.formFilled)
-        //     if (this.state.fullFilled) { this.setState({formCompletado: true})}
-        // }
-
     }, {
         key: 'addClub',
         value: function addClub(club) {
             var _this3 = this;
 
-            //console.log('Añadiendo club en Clubs')
             var updatedClub = Object.assign({}, club);
 
             _utils.APIManager.post('/api/club', updatedClub, function (err, response) {
@@ -10320,24 +10287,24 @@ var Clubs = function (_Component) {
                     return;
                 }
 
-                //console.log('Creado nuevo club: ', JSON.stringify(response))
+                console.log('Creado nuevo club: ', JSON.stringify(response));
                 var updatedList = Object.assign([], _this3.state.list);
                 updatedList.push(response.result);
                 _this3.setState({
-                    list: updatedList, activado: true, codigo: response.result.codigo
+                    list: updatedList
                 });
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            //console.log('Renderizando Clubs')
+
             return _react2.default.createElement(
                 'div',
                 { className: 'ed-container form__container' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'ed-item form__form' },
+                    { className: 'ed-item form__form l-60' },
                     _react2.default.createElement(
                         'div',
                         null,
@@ -10348,7 +10315,7 @@ var Clubs = function (_Component) {
                             this.props.user.displayName
                         )
                     ),
-                    this.state.activado === false ? _react2.default.createElement(_presentation.CreateClub, { onCreate: this.addClub.bind(this), activado: this.state.activado, user: this.props.user }) : _react2.default.createElement(_Atletas2.default, { codigo: this.state.codigo })
+                    this.state.activado === false ? _react2.default.createElement(_presentation.CreateClub, { onCreate: this.addClub.bind(this), activado: this.state.activado, user: this.state.user }) : _react2.default.createElement(_Atletas2.default, { codigo: this.state.codigo })
                 ),
                 _react2.default.createElement(
                     'div',
@@ -10391,7 +10358,7 @@ var _auth2 = _interopRequireDefault(_auth);
 
 __webpack_require__(212);
 
-var _Spinner = __webpack_require__(29);
+var _Spinner = __webpack_require__(36);
 
 var _Spinner2 = _interopRequireDefault(_Spinner);
 
@@ -10429,7 +10396,7 @@ var Login = function (_Component) {
             var _this2 = this;
 
             //console.log(this.state.loading)
-            //this.setState({ loading: true })
+            this.setState({ loading: true });
             _firebase2.default.auth().onAuthStateChanged(function (user) {
                 _this2.setState({ user: user });
                 _this2.props.isUserauth(user);
@@ -10487,17 +10454,13 @@ var Login = function (_Component) {
             if (this.state.user) {
                 return _react2.default.createElement(
                     'div',
-                    { className: 'w3-dropdown-hover w3-white user-in' },
+                    { className: 'w3-dropdown-hover w3-white' },
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        _react2.default.createElement(
-                            'a',
-                            { href: '#' },
-                            _react2.default.createElement('img', { className: 'circle', width: '32', height: '32', src: this.state.user.photoURL, alt: 'avatar' }),
-                            ' ',
-                            this.state.user.providerData[0].email
-                        )
+                        'a',
+                        { href: '#' },
+                        _react2.default.createElement('img', { className: 'circle', width: '32', height: '32', src: this.state.user.photoURL, alt: 'avatar' }),
+                        ' ',
+                        this.state.user.providerData[0].email
                     ),
                     _react2.default.createElement(
                         'div',
@@ -10521,53 +10484,49 @@ var Login = function (_Component) {
                 //console.log(this.state.loading)
                 return _react2.default.createElement(
                     'div',
-                    { className: 'w3-bar w3-border-bottom bg-spinner' },
-                    _react2.default.createElement(
+                    { className: 'ed-container full' },
+                    this.state.loading ? _react2.default.createElement(_Spinner2.default, null) : _react2.default.createElement(
                         'div',
-                        { className: 'ed-container full' },
-                        this.state.loading ? _react2.default.createElement(_Spinner2.default, null) : _react2.default.createElement(
+                        { className: 'ed-item l-30 main-end padding' },
+                        _react2.default.createElement(
                             'div',
-                            { className: 'ed-item l-30 main-end padding' },
+                            { className: 'ed-container' },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'ed-container' },
+                                { className: 'ed-item main-center ' },
                                 _react2.default.createElement(
-                                    'div',
-                                    { className: 'ed-item main-center ' },
-                                    _react2.default.createElement(
-                                        'button',
-                                        { className: 'cross-end icon-gplus login-button google', onClick: function onClick(name) {
-                                                return _this3.handleAuth('google');
-                                            } },
-                                        'Entra con Google'
-                                    )
-                                ),
+                                    'button',
+                                    { className: 'cross-end icon-gplus login-button google', onClick: function onClick(name) {
+                                            return _this3.handleAuth('google');
+                                        } },
+                                    'Entra con Google'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'ed-item main-center' },
                                 _react2.default.createElement(
-                                    'div',
-                                    { className: 'ed-item main-center' },
-                                    _react2.default.createElement(
-                                        'button',
-                                        { className: 'cross-end icon-facebook login-button facebook', onClick: function onClick(name) {
-                                                return _this3.handleAuth('facebook');
-                                            } },
-                                        'Entra con Facebook'
-                                    )
-                                ),
+                                    'button',
+                                    { className: 'cross-end icon-facebook login-button facebook', onClick: function onClick(name) {
+                                            return _this3.handleAuth('facebook');
+                                        } },
+                                    'Entra con Facebook'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'ed-item main-center' },
                                 _react2.default.createElement(
-                                    'div',
-                                    { className: 'ed-item main-center' },
-                                    _react2.default.createElement(
-                                        'button',
-                                        { className: 'cross-end icon-twitter login-button twitter', onClick: function onClick(name) {
-                                                return _this3.handleAuth('twitter');
-                                            } },
-                                        'Entra con Twitter'
-                                    )
+                                    'button',
+                                    { className: 'cross-end icon-twitter login-button twitter', onClick: function onClick(name) {
+                                            return _this3.handleAuth('twitter');
+                                        } },
+                                    'Entra con Twitter'
                                 )
                             )
-                        ),
-                        _react2.default.createElement('div', { className: 'ed-item l-70 main-start padding' })
-                    )
+                        )
+                    ),
+                    _react2.default.createElement('div', { className: 'ed-item l-70 main-start padding' })
                 );
             }
         }
@@ -10622,13 +10581,76 @@ var Atleta = function (_Component) {
     function Atleta() {
         _classCallCheck(this, Atleta);
 
-        return _possibleConstructorReturn(this, (Atleta.__proto__ || Object.getPrototypeOf(Atleta)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Atleta.__proto__ || Object.getPrototypeOf(Atleta)).call(this));
+
+        _this.state = {
+            currentAtleta: [],
+            codigo: null
+        };
+        return _this;
     }
 
     _createClass(Atleta, [{
+        key: 'onSelectTitle',
+        value: function onSelectTitle(event) {
+            event.preventDefault();
+        }
+    }, {
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
+
+            //console.log('Se monta Atleta', this.props.currentAtleta, this.props.codigo)
+            if (this.props.currentAtleta == undefined) {
+                fetch('/api/club/' + this.props.codigo).then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    _this2.setState({
+                        currentAtleta: data.result[0].participantes,
+                        codigo: data.result.codigo
+                    });
+                });
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
-            console.log(this.props);
+            console.log(this.state);
+            var listItems = this.state.currentAtleta.map(function (item, i) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: i },
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'detail' },
+                        'Atleta: ',
+                        item.nombre
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'detail' },
+                        'Edad: ',
+                        item.edad,
+                        ' a\xF1os'
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'detail' },
+                        'Cintur\xF3n: ',
+                        item.cinturon
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'span',
+                        { className: 'detail' },
+                        'Discapacidad: ',
+                        item.discapacidad
+                    ),
+                    _react2.default.createElement('br', null)
+                );
+            });
             return _react2.default.createElement(
                 'div',
                 { style: _styles2.default.zone.container },
@@ -10637,28 +10659,14 @@ var Atleta = function (_Component) {
                     null,
                     _react2.default.createElement(
                         'h2',
-                        { style: _styles2.default.zone.header },
-                        this.props.listaAtletas.nombre
+                        { onClick: this.onSelectTitle.bind(this), style: _styles2.default.zone.header },
+                        this.state.currentAtleta.club
                     )
                 ),
                 _react2.default.createElement(
                     'div',
                     null,
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        this.props.listaAtletas.cinturon
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        this.props.listaAtletas.edad
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        this.props.listaAtletas.discapacidad
-                    )
+                    listItems
                 )
             );
         }
@@ -10761,13 +10769,7 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Spinner = __webpack_require__(29);
-
-var _Spinner2 = _interopRequireDefault(_Spinner);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -10786,9 +10788,7 @@ var CreateAtleta = function (_Component) {
         _this.state = {
             codigo: props.codigo,
             atleta: {},
-            anadido: 0,
-            formFilled: false,
-            loading: true
+            anadido: 0
         };
 
         _this.updateAtleta = _this.updateAtleta.bind(_this);
@@ -10797,145 +10797,47 @@ var CreateAtleta = function (_Component) {
     }
 
     _createClass(CreateAtleta, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            console.log('Will Mount');
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            //console.log('Did Mount')
-            this.setState({ loading: false });
-        }
-    }, {
         key: 'updateAtleta',
         value: function updateAtleta(event) {
-            //console.log(this.state.formFilled)
-            //console.log(this.mynombre.value !== '')
-            var validar = 0;
-            this.mynombre.value !== '' ? validar = validar + 1 : validar = 0;
-            this.myedad.value !== '' ? validar = validar + 1 : validar = 0;
-            this.mycinturon.value !== '' ? validar = validar + 1 : validar = 0;
-            this.mydiscapacidad.value !== '' ? validar = validar + 1 : validar = 0;
-            //console.log(validar)
             var updated = Object.assign({}, this.state.atleta);
             updated[event.target.id] = event.target.value;
-
-            if (validar == 4) {
-                //console.log(this.mybutton, this.mybutton.disabled, this.state)            
-                this.setState({
-                    formFilled: true,
-                    atleta: updated
-                });
-            } else {
-                this.setState({ formFilled: false, atleta: updated });
-            }
+            this.setState({
+                atleta: updated
+            });
+            this.id.value = '';
         }
     }, {
         key: 'submitAtleta',
         value: function submitAtleta(event) {
-            //console.log(JSON.stringify(this.state.atleta))
-            if (!this.state.formFilled) {
-                return;
-            } else {
-                this.props.onCreate(this.state.atleta, this.state.codigo);
-                this.mynombre.value = '';
-                this.myedad.value = '';
-                this.mycinturon.value = '';
-                this.mydiscapacidad.value = '';
-                this.setState({ formFilled: false });
-            }
+            console.log(this.state.anadido);
+            this.props.onCreate(this.state.atleta, this.state.codigo);
         }
     }, {
         key: 'render',
         value: function render() {
-            var _React$createElement,
-                _this2 = this,
-                _React$createElement2,
-                _React$createElement3,
-                _React$createElement4,
-                _React$createElement5;
-
-            if (this.state.loading) {
-                return _react2.default.createElement(_Spinner2.default, null);
-            }
             return _react2.default.createElement(
                 'div',
-                { className: 'w3-container w3-padding' },
+                null,
                 _react2.default.createElement(
-                    'div',
-                    { className: 'w3-card-4 w3-light-grey w3-text-blue w3-padding' },
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'C\xF3digo del equipo: ',
-                        this.props.codigo
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'w3-container' },
-                        _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement('input', (_React$createElement = { id: 'codigo', className: 'w3-input', onChange: this.updateAtleta.bind(this) }, _defineProperty(_React$createElement, 'className', 'form-control'), _defineProperty(_React$createElement, 'type', 'hidden'), _defineProperty(_React$createElement, 'value', this.props.codigo), _React$createElement))
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'w3-container' },
-                        _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement('input', (_React$createElement2 = { id: 'nombre', className: 'w3-input', ref: function ref(mynombre) {
-                                    return _this2.mynombre = mynombre;
-                                }, onChange: this.updateAtleta.bind(this) }, _defineProperty(_React$createElement2, 'className', 'form-control'), _defineProperty(_React$createElement2, 'type', 'text'), _defineProperty(_React$createElement2, 'placeholder', 'Nombre'), _React$createElement2)),
-                            _react2.default.createElement('br', null)
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'w3-container' },
-                        _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement('input', (_React$createElement3 = { id: 'edad', className: 'w3-input', ref: function ref(myedad) {
-                                    return _this2.myedad = myedad;
-                                }, onChange: this.updateAtleta.bind(this) }, _defineProperty(_React$createElement3, 'className', 'form-control'), _defineProperty(_React$createElement3, 'type', 'text'), _defineProperty(_React$createElement3, 'placeholder', 'Edad'), _React$createElement3)),
-                            '     ',
-                            _react2.default.createElement('br', null)
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'w3-container' },
-                        _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement('input', (_React$createElement4 = { id: 'cinturon', className: 'w3-input', ref: function ref(mycinturon) {
-                                    return _this2.mycinturon = mycinturon;
-                                }, onChange: this.updateAtleta.bind(this) }, _defineProperty(_React$createElement4, 'className', 'form-control'), _defineProperty(_React$createElement4, 'type', 'text'), _defineProperty(_React$createElement4, 'placeholder', 'Cintur\xF3n'), _React$createElement4)),
-                            ' ',
-                            _react2.default.createElement('br', null)
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'w3-container' },
-                        _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement('input', (_React$createElement5 = { id: 'discapacidad', className: 'w3-input', ref: function ref(mydiscapacidad) {
-                                    return _this2.mydiscapacidad = mydiscapacidad;
-                                }, onChange: this.updateAtleta.bind(this) }, _defineProperty(_React$createElement5, 'className', 'form-control'), _defineProperty(_React$createElement5, 'type', 'text'), _defineProperty(_React$createElement5, 'placeholder', 'Discapacidad'), _React$createElement5))
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { ref: function ref(mybutton) {
-                                return _this2.mybutton = mybutton;
-                            }, onClick: this.submitAtleta.bind(this), className: 'w3-btn w3-blue' },
-                        'A\xF1adir nuevo participante'
-                    )
+                    'p',
+                    null,
+                    'C\xF3digo del equipo: ',
+                    this.props.codigo
+                ),
+                _react2.default.createElement('input', { id: 'codigo', onChange: this.updateAtleta.bind(this), className: 'form-control', type: 'hidden', value: this.props.codigo }),
+                _react2.default.createElement('input', { id: 'nombre', onChange: this.updateAtleta.bind(this), className: 'form-control', type: 'text', placeholder: 'Nombre' }),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { id: 'edad', onChange: this.updateAtleta.bind(this), className: 'form-control', type: 'text', placeholder: 'Edad' }),
+                '     ',
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { id: 'cinturon', onChange: this.updateAtleta.bind(this), className: 'form-control', type: 'text', placeholder: 'Cintur\xF3n' }),
+                ' ',
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { id: 'discapacidad', onChange: this.updateAtleta.bind(this), className: 'form-control', type: 'text', placeholder: 'Discapacidad' }),
+                _react2.default.createElement(
+                    'button',
+                    { onClick: this.submitAtleta.bind(this), className: 'btn btn-danger' },
+                    'A\xF1adir nuevo participante'
                 )
             );
         }
@@ -10988,15 +10890,21 @@ var CreateClub = function (_Component) {
         var _this = _possibleConstructorReturn(this, (CreateClub.__proto__ || Object.getPrototypeOf(CreateClub)).call(this, props));
 
         _this.state = {
-            club: {}, codigo: null,
-            upload1: 0, upload2: 0,
+            club: {},
+            codigo: null,
+            upload1: 0,
+            upload2: 0,
+            ok1: 0,
+            ok2: 0,
             user: [],
-            formFilled: false, docsFilled: 0, fullFilled: false,
+            paso: 0,
+            formok: false,
             activado: props.activado,
             updateForm: ''
         };
 
         _this.handleUpload = _this.handleUpload.bind(_this);
+        _this.updatedAtletas = _this.updatedAtletas.bind(_this);
         _this.renderFormulario = _this.renderFormulario.bind(_this);
         return _this;
     }
@@ -11004,76 +10912,58 @@ var CreateClub = function (_Component) {
     _createClass(CreateClub, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
-            //console.log('Componente CreateClub Will Mount: \n', !this.state.user)
-            if (!this.state.user) {
-                var user = this.props.user;
-
-                this.setState({ user: user });
-            }
             //console.log('El componente CreateClub recibe estas props: ', this.props)
             //console.log('Extraigo el email de estas props: ', this.props.user.email)
-        }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            if (!this.state.fullFilled) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }, {
-        key: 'componentWillUpdate',
-        value: function componentWillUpdate(nextProps, nextState) {}
-    }, {
-        key: 'componentDidUpdate',
-        value: function componentDidUpdate(prevProps, prevState) {
-            if (this.state.docsFilled == 2 && this.state.formFilled) {
-                this.setState({ fullFilled: true });
-            }
-        }
-    }, {
-        key: 'updateForm',
-        value: function updateForm(event) {
-            console.log('Actualizando formulario', '\nCodigo: ', this.state.codigo, '\nDocumentos subidos: ', this.state.docsFilled, '\n¿Está completo el formulario?: ', this.state.formFilled);
-            var codigo = this.state.codigo,
-                updated = Object.assign({}, this.state.club),
-                docsFilled = this.state.docsFilled;
+            var user = this.props.user;
 
+            this.setState({ user: user });
+        }
+    }, {
+        key: 'updateClub',
+        value: function updateClub(event) {
+            //console.log(this.state.codigo == null)
+            //console.log('updateClub: ', event.target.id, ' == ', event.target.value, this.myclub.value)
+            var codigo = this.state.codigo;
             if (codigo == null) {
                 codigo = Math.floor(Math.random() * 1000 + 1000);
-            } else {
-                return;
             }
+            var updated = Object.assign({}, this.state.club);
 
             updated[event.target.id] = event.target.value;
             updated['codigo'] = codigo;
             updated['email'] = this.props.user.providerData[0].email;
-            //console.log(updated)   
-
-
-            if (this.myclub.value !== "" && this.mydomicilio.value !== '' && this.mydtecnico.value !== '' && this.myfederacion.value !== '') {
-                this.setState({ formFilled: true, club: updated, docsFilled: docsFilled });
-            } else {
-                this.setState({ formFilled: false, club: updated, docsFilled: docsFilled });
-            }
+            this.setState({
+                club: updated,
+                codigo: codigo
+            });
         }
     }, {
-        key: 'submitForm',
-        value: function submitForm(event) {
-            console.log('Pulsado boton');
-            if (!this.state.fullFilled) {
-                return;
-            }
-            console.log('Enviando Formulario');
+        key: 'submitClub',
+        value: function submitClub(event) {
             event.preventDefault();
+            var validar = 0;
+            this.myclub.value !== '' ? validar++ : validar = 0;
+            this.mydomicilio !== '' ? validar++ : validar = 0;
+            this.mydtecnico !== '' ? validar++ : validar = 0;
+            this.myfederacion !== '' ? validar++ : validar = 0;
+            //console.log(validar)
 
-            var r = confirm('\xBFSon correctos los datos?  \n\n            Nombre del Club: ' + this.myclub.value + ' \n\n            Domicilio: ' + this.mydomicilio.value + ' \n\n            Director T\xE9cnico: ' + this.mydtecnico.value + ' \n\n            Federaci\xF3n: ' + this.myfederacion.value + ' \n\n        ');
-            if (r == true) {
-                this.props.onCreate(this.state.club);
-                this.setState({ fullFilled: false });
-            } else {
-                alert('Formulario incompleto, por favor, revísalo de nuevo.');
+            if (validar === 4 && this.state.paso >= 1) {
+                var r = confirm('\xBFSon correctos los datos?  \n\n                Nombre del Club: ' + this.myclub.value + ' \n\n            ');
+                if (r == true) {
+                    this.props.onCreate(this.state.club);
+                    this.setState({ paso: 0, formok: true });
+                    // this.myclub.value = '' 
+                    // this.refs.domicilio.value = ''
+                    // this.refs.email.value = '' 
+                    // this.refs.dtecnico.value = '' 
+                    // this.refs.emailtecnico.value = ''
+                    // this.refs.federacion.value = '' 
+                    validar = 0;
+                    this.setState({ paso: this.state.paso + 1 });
+                } else {
+                    alert('Formulario incompleto, por favor, revísalo de nuevo.');
+                }
             }
         }
     }, {
@@ -11081,8 +10971,7 @@ var CreateClub = function (_Component) {
         value: function handleUpload(event) {
             var _this2 = this;
 
-            var name = event.target.name; //=== 'upload1' ? 'upload1' : 'upload2'
-            //console.log(name)
+            var name = event.target.name === 'upload1' ? 'upload1' : 'upload2';
             var file = event.target.files[0];
             var storageRef = _firebase2.default.storage().ref('/upload1umentos/' + this.state.codigo + '/' + file.name);
             var task = storageRef.put(file);
@@ -11098,20 +10987,19 @@ var CreateClub = function (_Component) {
             }, function (error) {
                 console.log(error.message);
             }, function () {
-                var docsFilled = _this2.state.docsFilled;
                 //console.log(name)
                 if (name == 'upload1') {
-                    if (docsFilled == 1) {
-                        _this2.setState({ docsFilled: 2, upload1: 100, file1: task.snapshot.downloadURL });
-                    } else if (docsFilled == 0) {
-                        _this2.setState({ docsFilled: 1, upload1: 100, file1: task.snapshot.downloadURL });
-                    }
+                    _this2.setState({
+                        paso: _this2.state.paso + 1,
+                        upload1: 100, ok1: 1,
+                        file1: task.snapshot.downloadURL
+                    });
                 } else if (name == 'upload2') {
-                    if (docsFilled == 1) {
-                        _this2.setState({ docsFilled: 2, upload2: 100, file2: task.snapshot.downloadURL });
-                    } else if (docsFilled == 0) {
-                        _this2.setState({ docsFilled: 1, upload1: 100, file2: task.snapshot.downloadURL });
-                    }
+                    _this2.setState({
+                        paso: _this2.state.paso + 1,
+                        upload2: 100, ok2: 1,
+                        file2: task.snapshot.downloadURL
+                    });
                 } else {
                     alert('Parece que el archivo ha sido cargado correctamebte pero aún faltan campos del formulario que debes completar, y por último pulsa sobre "Añadir club". \n¡Estás a un paso de completar el resgistro.!');
                     return;
@@ -11119,119 +11007,66 @@ var CreateClub = function (_Component) {
             });
         }
     }, {
+        key: 'updatedAtletas',
+        value: function updatedAtletas() {}
+    }, {
         key: 'renderFormulario',
         value: function renderFormulario() {
             var _this3 = this;
 
-            console.log(!this.state.fullFilled);
-
-            //console.log(this.state.formFilled)
-            return _react2.default.createElement(
-                'div',
-                { className: 'ed-container' },
-                _react2.default.createElement(
+            //console.log(this.state)
+            if (this.state.formok === false) {
+                //console.log(this.state.formok)
+                return _react2.default.createElement(
                     'div',
-                    { className: 'ed-item l-50 no-padding' },
+                    null,
                     _react2.default.createElement(
                         'div',
-                        { className: 'w3-card-4 w3-light-grey w3-text-blue w3-padding' },
+                        null,
                         _react2.default.createElement(
-                            'h3',
+                            'p',
                             null,
                             'Datos del club:'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'w3-row w3-section' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'w3-col' },
-                                _react2.default.createElement('i', { className: 'w3-large icon-user' })
-                            ),
-                            _react2.default.createElement('input', { className: 'w3-input w3-animate-input input-text', id: 'club', ref: function ref(myclub) {
-                                    return _this3.myclub = myclub;
-                                }, onChange: this.updateForm.bind(this), type: 'text', placeholder: 'Nombre del Club' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'w3-row w3-section' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'w3-col' },
-                                _react2.default.createElement('i', { className: 'w3-large icon-user' })
-                            ),
-                            _react2.default.createElement('input', { className: 'w3-input w3-animate-input input-text', id: 'dtecnico', ref: function ref(mydtecnico) {
-                                    return _this3.mydtecnico = mydtecnico;
-                                }, onChange: this.updateForm.bind(this), type: 'text', placeholder: 'Director T\xE9cnico' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'w3-row w3-section' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'w3-col' },
-                                _react2.default.createElement('i', { className: 'w3-large icon-user' })
-                            ),
-                            _react2.default.createElement('input', { className: 'w3-input w3-animate-input input-text', id: 'domicilio', ref: function ref(mydomicilio) {
-                                    return _this3.mydomicilio = mydomicilio;
-                                }, onChange: this.updateForm.bind(this), type: 'text', placeholder: 'Domicilio' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'w3-row w3-section' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'w3-col' },
-                                _react2.default.createElement('i', { className: 'w3-large icon-user' })
-                            ),
-                            _react2.default.createElement('input', { className: 'w3-input w3-animate-input input-text', id: 'federacion', ref: function ref(myfederacion) {
-                                    return _this3.myfederacion = myfederacion;
-                                }, onChange: this.updateForm.bind(this), type: 'text', placeholder: 'Federaci\xF3n' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'main-end' },
-                            _react2.default.createElement('button', { ref: function ref(mybutton) {
-                                    return _this3.mybutton = mybutton;
-                                }, onClick: this.submitForm.bind(this), className: 'w3-btn w3-circle w3-blue icon-plus' })
                         )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'ed-item l-50 no-padding' },
+                    ),
+                    _react2.default.createElement('input', { id: 'club', ref: function ref(myclub) {
+                            return _this3.myclub = myclub;
+                        }, onChange: this.updateClub.bind(this), className: 'form-control', type: 'text', placeholder: 'Nombre del Club' }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('input', { id: 'dtecnico', ref: function ref(mydtecnico) {
+                            return _this3.mydtecnico = mydtecnico;
+                        }, onChange: this.updateClub.bind(this), className: 'form-control', type: 'text', placeholder: 'Director T\xE9cnico' }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('input', { id: 'domicilio', ref: function ref(mydomicilio) {
+                            return _this3.mydomicilio = mydomicilio;
+                        }, onChange: this.updateClub.bind(this), className: 'form-control', type: 'text', placeholder: 'Domicilio' }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('input', { id: 'federacion', ref: function ref(myfederacion) {
+                            return _this3.myfederacion = myfederacion;
+                        }, onChange: this.updateClub.bind(this), className: 'form-control', type: 'text', placeholder: 'Federaci\xF3n' }),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'button',
+                        { onClick: this.submitClub.bind(this), className: 'btn btn-danger' },
+                        'A\xF1adir Club'
+                    ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'w3-panel w3-blue w3-card-4' },
-                        _react2.default.createElement(
-                            'h3',
-                            { className: '' },
-                            'Env\xEDo de documentos'
-                        ),
+                        null,
                         _react2.default.createElement('hr', null),
                         this.state.upload1 > 0 && this.state.upload1 < 100 ? _react2.default.createElement(
                             'div',
-                            { className: 'w3-panel w3-green w3-card-4' },
+                            null,
                             _react2.default.createElement(
                                 'p',
-                                { className: 'icon-cog-alt' },
-                                'Informaci\xF3n de transferencia de archivo'
-                            ),
-                            _react2.default.createElement(
-                                'code',
                                 null,
-                                'Enviando...',
+                                'Enviando documento...',
                                 _react2.default.createElement('progress', { value: this.state.upload1, max: '100' })
                             )
                         ) : '',
                         this.state.upload2 > 0 && this.state.upload2 < 100 ? _react2.default.createElement(
                             'div',
-                            { className: 'w3-panel w3-green w3-card-4' },
-                            _react2.default.createElement(
-                                'h3',
-                                { className: 'icon-cog-alt' },
-                                'Informaci\xF3n de transferencia de archivo'
-                            ),
+                            null,
                             _react2.default.createElement(
                                 'p',
                                 null,
@@ -11240,23 +11075,33 @@ var CreateClub = function (_Component) {
                             )
                         ) : '',
                         _react2.default.createElement(
-                            'div',
+                            'span',
                             { className: 'icon-up-open-big' },
-                            'Declaraci\xF3n de responsabilidad (firmada): ',
-                            this.state.upload1 == 100 ? _react2.default.createElement('span', { className: 'icon-ok' }) : '',
-                            this.state.upload1 === 0 ? _react2.default.createElement('input', { className: 'input-file', name: 'upload1', onChange: this.handleUpload.bind(this), type: 'file' }) : ''
+                            'Envia la declaraci\xF3n de responsabilidad (firmada): ',
+                            this.state.ok2 === 1 ? _react2.default.createElement('span', { className: 'icon-ok' }) : '',
+                            this.state.upload2 === 0 ? _react2.default.createElement('input', { name: 'upload2', onChange: this.handleUpload.bind(this), type: 'file' }) : ''
                         ),
                         _react2.default.createElement(
-                            'div',
+                            'span',
                             { className: 'icon-up-open-big' },
-                            'Justificante de pago: ',
-                            this.state.upload2 == 100 ? _react2.default.createElement('span', { className: 'icon-ok' }) : '',
-                            this.state.upload2 === 0 ? _react2.default.createElement('input', { className: 'input-file', name: 'upload2', onChange: this.handleUpload.bind(this), type: 'file' }) : ''
+                            'Envia justificante de pago: ',
+                            this.state.ok1 === 1 ? _react2.default.createElement('span', { className: 'icon-ok' }) : '',
+                            this.state.upload1 === 0 ? _react2.default.createElement('input', { name: 'upload1', onChange: this.handleUpload.bind(this), type: 'file' }) : ''
                         ),
                         _react2.default.createElement('br', null)
                     )
-                )
-            );
+                );
+            } else {
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_Atletas2.default, { codigo: this.state.codigo,
+                        club: this.state.club,
+                        user: this.props.user,
+                        updatedAtletas: this.updatedAtletas
+                    })
+                );
+            }
         }
     }, {
         key: 'render',
@@ -11527,7 +11372,7 @@ exports = module.exports = __webpack_require__(104)(undefined);
 
 
 // module
-exports.push([module.i, ".spinner {\n  margin: 1em;\n  text-align: center;\n  width: 100%; }\n\n.login-button {\n  border: none;\n  border-radius: .5em;\n  box-sizing: border-box;\n  color: white;\n  display: block;\n  font-size: 1.2em;\n  margin: 1em;\n  padding: .4em;\n  transition: background .4s; }\n  .login-button:hover {\n    background: white;\n    cursor: pointer; }\n\n.google {\n  background-color: #d34836; }\n  .google:hover {\n    color: #d34836;\n    border: 1px solid #d34836; }\n\n.facebook {\n  background-color: #3b5998; }\n  .facebook:hover {\n    color: #3b5998;\n    border: 1px solid #3b5998; }\n\n.twitter {\n  background-color: #00aced; }\n  .twitter:hover {\n    color: #00aced;\n    border: 1px solid #00aced; }\n\n.user-in {\n  padding: .8em; }\n  .user-in p {\n    font-size: .8em; }\n\n.input-file {\n  font-size: .7em; }\n\n.input-text {\n  background: none; }\n", ""]);
+exports.push([module.i, ".spinner {\n  margin: 1em;\n  text-align: center;\n  width: 100%; }\n\n.login-button {\n  border: none;\n  border-radius: .5em;\n  box-sizing: border-box;\n  color: white;\n  display: block;\n  font-size: 1.2em;\n  margin: 1em;\n  padding: .4em;\n  transition: background .4s; }\n  .login-button:hover {\n    background: white;\n    cursor: pointer; }\n\n.google {\n  background-color: #d34836; }\n  .google:hover {\n    color: #d34836;\n    border: 1px solid #d34836; }\n\n.facebook {\n  background-color: #3b5998; }\n  .facebook:hover {\n    color: #3b5998;\n    border: 1px solid #3b5998; }\n\n.twitter {\n  background-color: #00aced; }\n  .twitter:hover {\n    color: #00aced;\n    border: 1px solid #00aced; }\n", ""]);
 
 // exports
 
@@ -14726,7 +14571,7 @@ module.exports = DefaultEventPluginOrder;
 
 var EventPropagators = __webpack_require__(25);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(32);
+var SyntheticMouseEvent = __webpack_require__(31);
 
 var eventTypes = {
   mouseEnter: {
@@ -16402,8 +16247,8 @@ var DOMNamespaces = __webpack_require__(39);
 var DOMProperty = __webpack_require__(14);
 var DOMPropertyOperations = __webpack_require__(67);
 var EventPluginHub = __webpack_require__(24);
-var EventPluginRegistry = __webpack_require__(30);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var EventPluginRegistry = __webpack_require__(29);
+var ReactBrowserEventEmitter = __webpack_require__(30);
 var ReactDOMComponentFlags = __webpack_require__(68);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMInput = __webpack_require__(145);
@@ -16415,7 +16260,7 @@ var ReactMultiChild = __webpack_require__(164);
 var ReactServerRenderingTransaction = __webpack_require__(169);
 
 var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(34);
+var escapeTextContentForBrowser = __webpack_require__(33);
 var invariant = __webpack_require__(1);
 var isEventSupported = __webpack_require__(50);
 var shallowEqual = __webpack_require__(37);
@@ -18356,7 +18201,7 @@ var DOMChildrenOperations = __webpack_require__(38);
 var DOMLazyTree = __webpack_require__(18);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(34);
+var escapeTextContentForBrowser = __webpack_require__(33);
 var invariant = __webpack_require__(1);
 var validateDOMNesting = __webpack_require__(52);
 
@@ -18828,7 +18673,7 @@ module.exports = {
 
 
 var DOMProperty = __webpack_require__(14);
-var EventPluginRegistry = __webpack_require__(30);
+var EventPluginRegistry = __webpack_require__(29);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -19313,7 +19158,7 @@ module.exports = ReactDebugTool;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(11);
-var Transaction = __webpack_require__(33);
+var Transaction = __webpack_require__(32);
 
 var emptyFunction = __webpack_require__(9);
 
@@ -19741,7 +19586,7 @@ var EventPluginHub = __webpack_require__(24);
 var EventPluginUtils = __webpack_require__(40);
 var ReactComponentEnvironment = __webpack_require__(43);
 var ReactEmptyComponent = __webpack_require__(70);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(30);
 var ReactHostComponent = __webpack_require__(72);
 var ReactUpdates = __webpack_require__(11);
 
@@ -20464,10 +20309,10 @@ var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(66);
 var PooledClass = __webpack_require__(15);
-var ReactBrowserEventEmitter = __webpack_require__(31);
+var ReactBrowserEventEmitter = __webpack_require__(30);
 var ReactInputSelection = __webpack_require__(73);
 var ReactInstrumentation = __webpack_require__(8);
-var Transaction = __webpack_require__(33);
+var Transaction = __webpack_require__(32);
 var ReactUpdateQueue = __webpack_require__(45);
 
 /**
@@ -20741,7 +20586,7 @@ module.exports = ReactRef;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(15);
-var Transaction = __webpack_require__(33);
+var Transaction = __webpack_require__(32);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactServerUpdateQueue = __webpack_require__(170);
 
@@ -21512,7 +21357,7 @@ var SyntheticClipboardEvent = __webpack_require__(176);
 var SyntheticEvent = __webpack_require__(13);
 var SyntheticFocusEvent = __webpack_require__(179);
 var SyntheticKeyboardEvent = __webpack_require__(181);
-var SyntheticMouseEvent = __webpack_require__(32);
+var SyntheticMouseEvent = __webpack_require__(31);
 var SyntheticDragEvent = __webpack_require__(178);
 var SyntheticTouchEvent = __webpack_require__(182);
 var SyntheticTransitionEvent = __webpack_require__(183);
@@ -21863,7 +21708,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(32);
+var SyntheticMouseEvent = __webpack_require__(31);
 
 /**
  * @interface DragEvent
@@ -22170,7 +22015,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(32);
+var SyntheticMouseEvent = __webpack_require__(31);
 
 /**
  * @interface WheelEvent
@@ -22942,7 +22787,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(34);
+var escapeTextContentForBrowser = __webpack_require__(33);
 
 /**
  * Escapes attribute value to prevent scripting attacks.

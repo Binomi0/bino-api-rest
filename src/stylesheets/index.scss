@@ -1,0 +1,62 @@
+$google-color : #d34836;
+$facebook-color : #3b5998;
+$twitter-color : #00aced;
+
+.spinner {
+    margin: 1em;
+    text-align: center;
+    width: 100%; 
+}
+
+.login-button {
+    border: none;
+    border-radius: .5em;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    margin: 1em;
+    padding: .4em;
+    transition: background .4s;
+    &:hover {
+        background: white;
+        cursor: pointer
+    }
+}
+
+.google {
+    background-color: $google-color;
+    &:hover {
+        color: $google-color;
+        border: 1px solid $google-color;
+  }
+}
+.facebook {
+    background-color: $facebook-color;
+    &:hover {
+        color: $facebook-color;
+        border: 1px solid $facebook-color;
+  }
+}
+.twitter {
+    background-color: $twitter-color;
+    &:hover {
+        color: $twitter-color;
+        border: 1px solid $twitter-color;
+  }
+}
+
+.user-in {
+    padding: .8em;
+    p {
+        font-size: .8em;
+    }
+}
+
+.input-file {
+    font-size: .7em;
+}
+.input-text {
+    //border: none;
+    background: none;
+}
