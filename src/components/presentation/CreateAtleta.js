@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Spinner from '../Spinner'
+import styles from './styles'
 
 class CreateAtleta extends Component {
     constructor(props){
@@ -16,7 +17,6 @@ class CreateAtleta extends Component {
         this.submitAtleta = this.submitAtleta.bind(this)
     }
 
-    componentWillMount(){console.log('Will Mount')}
     componentDidMount(){
         //console.log('Did Mount')
         this.setState({loading:false})
@@ -60,37 +60,26 @@ class CreateAtleta extends Component {
     render(){
         if (this.state.loading) { return <Spinner /> }
         return (
-            <div className="w3-container w3-padding">
-                <div className="w3-card-4 w3-light-grey w3-text-blue w3-padding">
-                    <p>Código del equipo: {this.props.codigo}</p>
-                    <div className="w3-container"> 
-                        <div>
-                            <input id="codigo" className="w3-input" onChange={this.updateAtleta.bind(this)} className="form-control" type="hidden" value={this.props.codigo}/>
-                        </div>
-                    </div>
-                    <div className="w3-container">
-                        <div>
-                            <input id="nombre" className="w3-input" ref={ (mynombre) => this.mynombre = mynombre} onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Nombre"/><br />           
-                        </div>
-                    </div>
-                    <div className="w3-container">
-                        <div>
-                            <input id="edad" className="w3-input" ref={ (myedad) => this.myedad = myedad} onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Edad"/>     <br />       
-                        </div>
-                    </div>
-                    <div className="w3-container">
-                        <div>
-                            <input id="cinturon" className="w3-input" ref={ (mycinturon) => this.mycinturon = mycinturon} onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Cinturón"/> <br />           
-                        </div>
-                    </div>
-                    <div className="w3-container">
-                        <div>
-                            <input id="discapacidad" className="w3-input" ref={ (mydiscapacidad) => this.mydiscapacidad = mydiscapacidad} onChange={this.updateAtleta.bind(this)} className="form-control" type="text" placeholder="Discapacidad"/>                      
-                        </div>
-                    </div>
-                    <button ref={ (mybutton) => this.mybutton = mybutton } onClick={this.submitAtleta.bind(this)} className="w3-btn w3-blue">Añadir nuevo participante</button>
-                    
+            <div> 
+                <p>Añadir participante:</p>
+                <input id="codigo"onChange={this.updateAtleta.bind(this)} type="hidden" value={this.props.codigo}/>
+                <div className="w3-row w3-section">
+                    <div className="w3-col" ><i className="w3-large icon-user"></i></div>
+                    <input style={styles.input} id="nombre" className="w3-input w3-animate-input input-text" ref={ (mynombre) => this.mynombre = mynombre} onChange={this.updateAtleta.bind(this)} type="text" placeholder="Nombre"/><br />           
+                </div>                    
+                 <div className="w3-row w3-section">
+                    <div className="w3-col" ><i className="w3-large icon-user"></i></div>
+                    <input style={styles.input} id="edad" className="w3-input w3-animate-input input-text" ref={ (myedad) => this.myedad = myedad} onChange={this.updateAtleta.bind(this)} type="text" placeholder="Edad"/>     <br />       
                 </div>
+                 <div className="w3-row w3-section">
+                    <div className="w3-col" ><i className="w3-large icon-user"></i></div>
+                    <input style={styles.input} id="cinturon" className="w3-input w3-animate-input input-text" ref={ (mycinturon) => this.mycinturon = mycinturon} onChange={this.updateAtleta.bind(this)} type="text" placeholder="Cinturón"/> <br />           
+                </div>                    
+                 <div className="w3-row w3-section">
+                    <div className="w3-col" ><i className="w3-large icon-user"></i></div>
+                    <input style={styles.input} id="discapacidad" className="w3-input w3-animate-input input-text" ref={ (mydiscapacidad) => this.mydiscapacidad = mydiscapacidad} onChange={this.updateAtleta.bind(this)} type="text" placeholder="Discapacidad"/>                      
+                </div>                    
+                <button ref={ (mybutton) => this.mybutton = mybutton } onClick={this.submitAtleta.bind(this)} className="w3-btn w3-blue">Añadir nuevo participante</button>                    
             </div>
         )
     }

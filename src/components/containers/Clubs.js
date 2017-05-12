@@ -17,14 +17,14 @@ class Clubs extends Component {
     }
 
     componentWillMount(){ 
-        console.log('componentWillMount | Clubs')
+        //console.log('componentWillMount | Clubs')
         if(!this.props.user){
             console.log('No hay usuario conectado')
-            return <Spinner />
+            return 
         } else {
-            console.log(this.props.user.providerData[0].email)
+            //console.log(this.props.user.providerData[0].email)
             APIManager.get('/api/club', { 'email': this.props.user.providerData[0].email }, (err, response) => {
-                console.log(response)
+                //console.log(response)
                 if (err){
                     alert('ERROR: Ha fallado la conexión al servidor: ', err.message)
                     return
@@ -63,7 +63,7 @@ class Clubs extends Component {
     }
 
     render() { 
-        console.log('Renderizando Clubs', this.state.list)
+        //console.log('Renderizando Clubs', this.state.list)
         return (
             <div className="ed-container form__container">
                 <div className="ed-item">

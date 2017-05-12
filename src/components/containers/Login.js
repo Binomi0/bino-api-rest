@@ -66,7 +66,7 @@ class Login extends Component {
     }
 
     renderLoginButton(){
-        console.log(!this.state.user)
+        //console.log(!this.state.user)
         if(this.state.user) {
             return (
                 <div className="w3-dropdown-hover w3-white user-in">

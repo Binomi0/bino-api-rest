@@ -1,4 +1,7 @@
 export default {
+    input: {
+        width:135
+    },
     universal: {
 
     },

@@ -18,13 +18,13 @@ class Atletas extends Component {
     }
 
     componentDidMount(){
-        console.log('Ejecutando componentWillMount')
+        //console.log('Ejecutando componentWillMount')
         APIManager.get(`/api/club/${this.props.codigo}`, null, (err, response) => {
             if(err){
                 alert('ERROR: ', err.message)
                 return
             }
-            console.log('Lista de Atletas: ', response.result[0].participantes)
+            //console.log('Lista de Atletas: ', response.result[0].participantes)
             let updatedList = response.result[0].participantes
             //updatedList.push(response.results)
             this.setState({
@@ -45,14 +45,14 @@ class Atletas extends Component {
     }
 
     addAtleta(atleta, codigo){
-        console.log('Atleta añadido',atleta, codigo)
+        //console.log('Atleta añadido',atleta, codigo)
         //let updatedAtleta = Object.assign({}, atleta)
         APIManager.put(`/api/club/${codigo}`, atleta, (err, response) => {
             if(err){
                 alert('ERROR: ', err.message)
                 return
             }
-            console.log('POST CREATED: ', JSON.stringify(response))
+            //console.log('POST CREATED: ', JSON.stringify(response))
             let updatedList = Object.assign([], this.state.list)
             updatedList.push(response.result)
             this.setState({
@@ -60,7 +60,7 @@ class Atletas extends Component {
                 codigo,
                 update: true
             })
-            console.log('Lista Recibida: ', response)
+            //console.log('Lista Recibida: ', response)
         })
     }
 
@@ -70,7 +70,7 @@ class Atletas extends Component {
 
     render() {
         
-        console.log(this.state.list)
+        //console.log(this.state.list)
         const participantes = this.state.list.length == 0 ? <h2>No hay participantes</h2> : ''
         const listaParticipantes = this.state.list.map((atleta, index) => {
             let selected = (index==this.state.selected)

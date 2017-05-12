@@ -44,7 +44,7 @@ class CreateClub extends Component {
     } 
 
     updateForm(event) {
-        console.log('Actualizando formulario', '\nCodigo: ', this.state.codigo, '\nDocumentos subidos: ', this.state.docsFilled, '\n¿Está completo el formulario?: ', this.state.formFilled)
+        //console.log('Actualizando formulario', '\nCodigo: ', this.state.codigo, '\nDocumentos subidos: ', this.state.docsFilled, '\n¿Está completo el formulario?: ', this.state.formFilled)
         let codigo = this.state.codigo,
         updated = Object.assign({}, this.state.club),
         docsFilled = this.state.docsFilled 
@@ -66,7 +66,7 @@ class CreateClub extends Component {
     }
 
     submitForm(event) {
-        console.log('Pulsado boton')
+        //console.log('Pulsado boton')
         if (!this.state.fullFilled) { return } 
         console.log('Enviando Formulario')
         event.preventDefault()
@@ -123,7 +123,7 @@ class CreateClub extends Component {
     }
 
     renderFormulario(){
-        console.log(!this.state.fullFilled)
+        //console.log(!this.state.fullFilled)
   
             //console.log(this.state.formFilled)
             return (
@@ -133,19 +133,19 @@ class CreateClub extends Component {
                             <h3>Datos del club:</h3>                
                             <div className="w3-row w3-section">
                                 <div className="w3-col" ><i className="w3-large icon-user"></i></div>
-                                    <input className="w3-input w3-animate-input input-text" id="club" ref={ (myclub) => this.myclub = myclub} onChange={this.updateForm.bind(this)} type="text" placeholder="Nombre del Club" />
+                                <input className="w3-input w3-animate-input input-text" id="club" ref={ (myclub) => this.myclub = myclub} onChange={this.updateForm.bind(this)} type="text" placeholder="Nombre del Club" />
                             </div>            
                             <div className="w3-row w3-section">
                                 <div className="w3-col" ><i className="w3-large icon-user"></i></div>
-                                    <input className="w3-input w3-animate-input input-text" id="dtecnico" ref={ (mydtecnico) => this.mydtecnico = mydtecnico} onChange={this.updateForm.bind(this)} type="text" placeholder="Director Técnico" />
+                                <input className="w3-input w3-animate-input input-text" id="dtecnico" ref={ (mydtecnico) => this.mydtecnico = mydtecnico} onChange={this.updateForm.bind(this)} type="text" placeholder="Director Técnico" />
                             </div>                       
                             <div className="w3-row w3-section">
                                 <div className="w3-col" ><i className="w3-large icon-user"></i></div>
-                                    <input className="w3-input w3-animate-input input-text" id="domicilio" ref={ (mydomicilio) => this.mydomicilio = mydomicilio} onChange={this.updateForm.bind(this)} type="text" placeholder="Domicilio" />
+                                <input className="w3-input w3-animate-input input-text" id="domicilio" ref={ (mydomicilio) => this.mydomicilio = mydomicilio} onChange={this.updateForm.bind(this)} type="text" placeholder="Domicilio" />
                             </div>                       
                             <div className="w3-row w3-section">
                                 <div className="w3-col" ><i className="w3-large icon-user"></i></div>
-                                    <input className="w3-input w3-animate-input input-text" id="federacion" ref={ (myfederacion) => this.myfederacion = myfederacion} onChange={this.updateForm.bind(this)} type="text" placeholder="Federación" />
+                                <input className="w3-input w3-animate-input input-text" id="federacion" ref={ (myfederacion) => this.myfederacion = myfederacion} onChange={this.updateForm.bind(this)} type="text" placeholder="Federación" />
                             </div> 
                             <div className="main-end">                            
                             <button ref={ (mybutton) => this.mybutton = mybutton } onClick={this.submitForm.bind(this)} className="w3-btn w3-circle w3-blue icon-plus"></button> 

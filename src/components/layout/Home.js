@@ -34,7 +34,7 @@ export default class Home extends Component {
     }
 
     render() {
-        console.log('Renderizando Home', this.state)
+        //console.log('Renderizando Home', this.state)
         if (this.state.loading) { return <Spinner /> } else {
             return ( 
                 <div>
