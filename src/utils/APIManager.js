@@ -64,8 +64,24 @@ export default {
         })
     },
 
-    delete: () => {
-
+    delete: (url, id) => {
+        console.log('URL: ', url, 'ID: ', id)
+        superagent
+        .post(url)
+        .send(id)
+        .set('Accept', 'application/json')
+        .end(err, response  => {
+            if(err) {
+                callback(err, null)
+                return
+            }
+            const confirmation = response.body.confirmation
+            if (confirmation != 'success') {
+                callback({message: response.body.message}, null)
+                return
+            }
+            console.log('DELETE REQUEST: ', response.body)
+            callback(null, response.body)
+        })
     }
-
 }

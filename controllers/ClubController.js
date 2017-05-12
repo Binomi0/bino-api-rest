@@ -46,7 +46,6 @@ module.exports = {
         })
     },
 
-
     modify: function(codigo, params, callback){
         Club.findOneAndUpdate({ 'codigo': codigo }, { $push: { 'participantes': params }}, {  new: true },function(err, result) {
             if(err){

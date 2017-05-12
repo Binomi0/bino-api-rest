@@ -33,35 +33,8 @@ export default class Home extends Component {
         }
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     console.log('componentWillReceiveProps: ', nextProps)
-    //     this.setState({
-    //         club: nextProps.currentAtleta
-    //     })
-    // }
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     //console.log('Should Update?: ', nextProps, 'nextState', nextState)
-    //     if(this.state.loading == true) { return true } else { return false }
-    // }
-
-    // componentWillUpdate(nextProps, nextState){
-    //     this.props = nextProps
-    //     this.state = nextState
-
-    //     // if (this.state.loading == true) {
-    //     //     this.setState({ loading:true })
-    //     // }
-    //     // console.log('Will Update?: ', nextProps, 'nextState', nextState)
-    // }
-    // componentDidUpdate(nextProps, nextState){
-    //     if (this.state.loading == false) {
-    //         this.setState({ loading:false })
-    //     }
-    //     //console.log('Did Update: ', nextProps, 'nextState', nextState)
-    // }
-
     render() {
-        console.log('Renderizando Home', this.state.loading)
+        console.log('Renderizando Home', this.state)
         if (this.state.loading) { return <Spinner /> } else {
             return ( 
                 <div>

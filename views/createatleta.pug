@@ -4,7 +4,7 @@ html(lang="es-ES")
         title= title
     body
         h1 Inscribir atleta
-        form(action="/api/club/1913" method="post")
+        form(action="/api/atleta" method="post")
             input(type="text" name="codigo" placeholder="Código del club" required)
             br
             input(type="text" name="nombre" placeholder="Nombre del atleta" required)
@@ -15,11 +15,18 @@ html(lang="es-ES")
             br
             input(type="text" name="discapacidad" placeholder="Discapacidad")
             br           
-            select(name="categoria")
-                each categoria in ['Kata Adaptado', 'Kata Élite', 'Kata Equipos', 'Kata Promoción', 'Kumite Individual', 'Kumite Equipos']
-                    option(value=categoria) #{categoria}
+            //- select(name="categoria")
+            //-     each categoria in ['Kata Adaptado', 'Kata Élite', 'Kata Equipos', 'Kata Promoción', 'Kumite Individual', 'Kumite Equipos']
+            //-         option(value=categoria) #{categoria}
             if (categoria)
             select(name="subcategoria")
                 each subcategoria in ['alevin', 'juvenil', 'veterano']
-                    option(value=subcategoria) #{subcategoria}                    
+                    option(value=subcategoria) #{subcategoria} 
+            input(type="checkbox", name="categoria" value="categoria1" label="categoria1") 
+            input(type="checkbox", name="categoria" value="categoria2" placeholder="categoria2") 
+            input(type="checkbox", name="categoria" value="categoria3") 
+            input(type="checkbox", name="categoria" value="categoria4") 
+            input(type="checkbox", name="categoria" value="categoria5") 
+            input(type="checkbox", name="categoria" value="categoria6") 
+            input(type="checkbox", name="categoria" value="categoria7") 
             input(type="submit")

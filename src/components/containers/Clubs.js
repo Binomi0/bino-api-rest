@@ -3,6 +3,7 @@ import { CreateClub, Club, CreateAtleta } from '../presentation'
 import Atletas from './Atletas'
 import { APIManager } from '../../utils'
 import firebase from 'firebase'
+import Spinner from '../Spinner'
 
 class Clubs extends Component {
     constructor(props) {
@@ -19,8 +20,9 @@ class Clubs extends Component {
         console.log('componentWillMount | Clubs')
         if(!this.props.user){
             console.log('No hay usuario conectado')
+            return <Spinner />
         } else {
-            //console.log(this.state.user.email)
+            console.log(this.props.user.providerData[0].email)
             APIManager.get('/api/club', { 'email': this.props.user.providerData[0].email }, (err, response) => {
                 console.log(response)
                 if (err){
@@ -40,24 +42,6 @@ class Clubs extends Component {
             })  
         }   
     }
-
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     //console.log('Create Club Should Update')
-    //     //console.log(!this.state.formCompletado)
-    //     if (!this.state.fullFilled) { return true } else { return false }
-    // }    
-
-    // componentWillUpdate(nextProps, nextState) {   
-    //     //console.log('Will Update: ', state)   
-    //     this.state = nextState
-    // }
-
-    // componentDidUpdate(prevProps, prevState) {                
-    //     //console.log('Se ha actualizado asi: ', '\n' ,prevState, '\n')
-    //     //console.log('El estado final : ', this.state)
-    //     //console.log('Validacion de formulario: ', this.state.docsFilled == 2, this.state.formFilled)
-    //     if (this.state.fullFilled) { this.setState({formCompletado: true})}
-    // }
 
     addClub(club){
         //console.log('Añadiendo club en Clubs')
@@ -79,24 +63,17 @@ class Clubs extends Component {
     }
 
     render() { 
-        //console.log('Renderizando Clubs')
+        console.log('Renderizando Clubs', this.state.list)
         return (
             <div className="ed-container form__container">
-                <div className="ed-item form__form">   
-                <div>
-                    <h4>Bienvenido, {this.props.user.displayName}</h4>
+                <div className="ed-item">
+                    <h4>Bienvenido, {this.state.list.club} <span className="w3-badge w3-blue">{this.state.list.codigo}</span></h4>                
                 </div>
-                    {
-                        this.state.activado === false ? 
-                        <CreateClub onCreate={this.addClub.bind(this)} activado={this.state.activado} user={this.props.user} /> : 
-                        <Atletas codigo={this.state.codigo}/>                     
-                    }
-                </div>
-                <div className="ed-item form__list l-40 main-end">                    
-                <div>
-                </div>
-                </div>                     
-
+                {
+                    this.state.activado === false ? 
+                    <CreateClub onCreate={this.addClub.bind(this)} activado={this.state.activado} user={this.props.user} /> : 
+                    <Atletas codigo={this.state.codigo} club={this.state.list} />                     
+                }
             </div>
         )
     }
