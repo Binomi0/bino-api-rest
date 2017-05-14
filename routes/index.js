@@ -7,25 +7,35 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' })
 });
 
-router.get('/createpost', function(req, res, next) {
-  res.render('createpost', null)
+router.get('/:resource', function(req, res, next) {
+  var resource = req.params.resource
+  res.render(resource, null)
 });
 
-router.get('/createcomment', function(req, res, next) {
-  res.render('createcomment', null)
-});
+// router.get('/createpost', function(req, res, next) {
+//   res.render('createpost', null)
+// });
 
-router.get('/createclub', function(req, res, next) {
-  res.render('createclub', null)
-});
+// router.get('/createcomment', function(req, res, next) {
+//   res.render('createcomment', null)
+// });
 
-router.get('/updateclub', function(req, res, next) {
-  res.render('updateclub', null)
-});
+// router.get('/createclub', function(req, res, next) {
+//   res.render('createclub', null)
+// });
 
-router.get('/createatleta', function(req, res, next) {
-  res.render('createatleta', null)
-});
+// router.get('/updateclub', function(req, res, next) {
+//   res.render('updateclub', null)
+// });
+
+// router.get('/createatleta', function(req, res, next) {
+//   res.render('createatleta', null)
+// });
+
+// router.get('/deleteatleta', function(req, res, next) {
+//   res.render('deleteatleta', null)
+// });
+
 
 // router.get('/privado', auth, (req, res) => {
 //   res.status(200).send({ message: 'Tienes Acceso' })

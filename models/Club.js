@@ -9,7 +9,7 @@ var clubSchema = new mongoose.Schema ({
     dtecnico: {type:String, default:''},
     emailtecnico: {type:String, default:''},
     federacion: {type:String, default:''},
-    participantes: {type:Array, default: []},
+    participantes: {type: mongoose.Schema.ObjectId, ref: 'atletaSchema'},
     timestamp: {type:Date, default:Date.now}
 })
 

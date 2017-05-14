@@ -41,6 +41,19 @@ module.exports = {
                 callback(err, null)
                 return
             }
+
+            callback(null, atleta)
+        })
+    },
+    
+    modify: function(id, params, callback){
+        Atleta.findByIdAndUpdate(id, params, {new:true}, function(err, atleta){
+            if(err){
+                callback(err, null)
+                return
+            }
+
+            callback(null, atleta)
         })
     },
 

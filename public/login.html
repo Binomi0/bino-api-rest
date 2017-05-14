@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="canonical" href="/login.html"/>
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com"/>
+    <link rel="dns-prefetch" href="http://google-analytics.com"/>
+    <link rel="dns-prefetch" href="https://www.youtube.com"/>
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+    <title>GymNoray - Centro Deportivo y Salud</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="ed-container full" id="top-nav">
+        <div class="ed-item s-80 l-30"><a href="/#">
+            <h2 class="logo">c.k.<span>gymnoray</span></h2></a>
+          <p class="subtitle">XII Torneo Internacional Karate Santa Pola</p>
+        </div>
+        <div class="ed-item s-20 l-70 no-padding">
+          <div class="ed-container">
+            <div class="ed-item main-end">
+              <div class="nav-toggle" id="main-nav-toggle">
+                <nav class="main-nav" id="main-nav">
+                  <ul class="main-menu" id="main-menu">
+                    <li class="main-menu__item"><a class="main-menu__link active icon-users" href="/torneo.html"> Torneo</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link active icon-users" href="#presentacion-torneo-karate-santa-pola"> Presentacion				</a></li>
+                    <li class="main-menu__item"><a class="active main-menu__link icon-emo-thumbsup" href="#miembros-club-karate-santa-pola">  el club</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link icon-picture" href="#galeria">galería</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link icon-mail" href="#contacto"> Contacto</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="ed-item l-100 no-padding">
+              <div class="ed-container top-menu from-l">
+                <div class="ed-item main-end sociales__header">
+                  <p class="sociales__title">Siguenos en </p><a class="sociales__small icon-facebook" href="https://www.facebook.com/torneokaratesantapola/" target="_blank"></a><a class="sociales__small icon-twitter" href="https://twitter.com/karatestapola?lang=es" target="_blank"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="login ed-container" id="login">
+      <div class="ed-item-login__item"> 
+        <h1 class="login__title">Acceso Privado</h1>
+        <form action="/createatleta">
+          <input type="text" placeholder="Usuario" id="username"/>
+          <input type="text" placeholder="Contraseña" id="password"/>
+          <button type="submit">Acceder </button>
+        </form>
+      </div>
+    </div>
+    <footer class="footer" data-role="footer" data-position="fixed" id="footer">
+      <div class="ed-container full">
+        <div class="ed-item m-50">
+          <p class="creditos">&copy;2017 <a href="http://gymnoray.com">C.K. GymNoray | </a><span class="karate">K</span>on mucho  <span class="icon-heart-filled">,  </span><a href="http://adolfo.onrubia.es"> Adolfo.</a></p>
+        </div>
+        <div class="ed-item m-50">
+          <div class="sociales"><a class="sociales__item icon-mail" href="#"></a><a class="sociales__item icon-facebook" href="https://www.facebook.com/torneokaratesantapola/" target="_blank"></a><a class="sociales__item icon-twitter" href="https://twitter.com/karatestapola?lang=es" target="_blank"></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ed-grid.js"></script>
+    <script>edgrid.menu('main-nav', 'main-menu')</script>
+  </body>
+</html>

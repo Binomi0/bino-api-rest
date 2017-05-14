@@ -3,6 +3,7 @@ import superagent from 'superagent'
 export default {
 
     get: (url, params, callback) => {
+        //console.log('URL: ', url, 'PARAMS: ', params)
         superagent
         .get(url)
         .query(params)
@@ -18,6 +19,7 @@ export default {
                 callback({message: response.body.message}, null)
                 return
             }
+            //console.log('GET REQUEST: ', response.body)
 
             callback(null, response.body)
         })
@@ -64,24 +66,14 @@ export default {
         })
     },
 
-    delete: (url, id) => {
-        console.log('URL: ', url, 'ID: ', id)
+    delete: (url, callback) => {
+        console.log('URL: ', url)
         superagent
-        .post(url)
-        .send(id)
-        .set('Accept', 'application/json')
-        .end(err, response  => {
-            if(err) {
-                callback(err, null)
-                return
-            }
-            const confirmation = response.body.confirmation
-            if (confirmation != 'success') {
-                callback({message: response.body.message}, null)
-                return
-            }
-            console.log('DELETE REQUEST: ', response.body)
-            callback(null, response.body)
+        .del(url)
+        //.send(body)
+        //.set('Accept', 'application/json')
+        .end((err)  => {
+            if(err) throw err  
         })
     }
 }
