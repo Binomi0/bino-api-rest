@@ -10141,6 +10141,8 @@ var _Home = __webpack_require__(91);
 
 var _Home2 = _interopRequireDefault(_Home);
 
+var _admin = __webpack_require__(219);
+
 var _firebase = __webpack_require__(21);
 
 var _firebase2 = _interopRequireDefault(_firebase);
@@ -10185,7 +10187,12 @@ var App = function (_Component) {
     return App;
 }(_react.Component);
 
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('react'));
+// ReactDOM.render(
+//     <App />,
+//     document.getElementById('react')
+// )
+
+_reactDom2.default.render(_react2.default.createElement(_admin.Admin, null), document.getElementById('admin'));
 
 /***/ }),
 /* 94 */
@@ -10349,6 +10356,12 @@ var Clubs = function (_Component) {
             });
         }
     }, {
+        key: 'selectedIndex',
+        value: function selectedIndex(index) {
+            //console.log('Selected Index')
+            this.setState({ selected: index });
+        }
+    }, {
         key: 'render',
         value: function render() {
             //console.log('Renderizando Clubs', this.state.list)
@@ -10369,6 +10382,15 @@ var Clubs = function (_Component) {
                             { className: 'w3-badge w3-blue' },
                             this.state.list.codigo
                         )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'club__container ed-container' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'ed-item' },
+                        _react2.default.createElement(_presentation.Club, { club: this.state.list, selectedIndex: this.selectedIndex.bind(this) })
                     )
                 ),
                 this.state.activado === false ? _react2.default.createElement(_presentation.CreateClub, { onCreate: this.addClub.bind(this), activado: this.state.activado, user: this.props.user }) : _react2.default.createElement(_Atletas2.default, { codigo: this.state.codigo, club: this.state.list })
@@ -10804,7 +10826,7 @@ var Club = function (_Component) {
         key: 'onSelectTitle',
         value: function onSelectTitle(event) {
             event.preventDefault();
-            this.props.onSelect(this.props.index);
+            this.props.selectedIndex(this.props.index);
         }
     }, {
         key: 'render',
@@ -10813,11 +10835,11 @@ var Club = function (_Component) {
             var title = this.props.isSelected ? _react2.default.createElement(
                 'a',
                 { style: clubStyle.club.active, href: '#' },
-                this.props.currentClub.club
+                this.props.club.club
             ) : _react2.default.createElement(
                 'a',
                 { href: '#', style: clubStyle.club.inactive },
-                this.props.currentClub.club
+                this.props.club.club
             );
 
             return _react2.default.createElement(
@@ -11676,7 +11698,7 @@ exports = module.exports = __webpack_require__(104)(undefined);
 
 
 // module
-exports.push([module.i, ".spinner {\n  margin: 1em;\n  text-align: center;\n  width: 100%; }\n\n.login-button {\n  border: none;\n  border-radius: .5em;\n  box-sizing: border-box;\n  color: white;\n  display: block;\n  font-size: 1.2em;\n  margin: 1em;\n  padding: .4em;\n  transition: background .4s; }\n  .login-button:hover {\n    background: white;\n    cursor: pointer; }\n\n.google {\n  background-color: #d34836; }\n  .google:hover {\n    color: #d34836;\n    border: 1px solid #d34836; }\n\n.facebook {\n  background-color: #3b5998; }\n  .facebook:hover {\n    color: #3b5998;\n    border: 1px solid #3b5998; }\n\n.twitter {\n  background-color: #00aced; }\n  .twitter:hover {\n    color: #00aced;\n    border: 1px solid #00aced; }\n\n.user-in {\n  padding: .8em; }\n  .user-in p {\n    font-size: .8em; }\n\n.input-file {\n  font-size: .7em; }\n\n.input-text {\n  background: none; }\n\n.atleta__item {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  position: relative;\n  padding-left: .5em;\n  padding-bottom: .5em; }\n  .atleta__item:hover {\n    /*content: \"X\";*/\n    background: #ccc;\n    /*\r\n            position: absolute;\r\n            width: 32px;\r\n            height: 32px;\r\n            top: 10px;\r\n            right: 0;  */ }\n\n.atleta__title {\n  font-size: 1.5em;\n  color: red;\n  margin: 0; }\n\np.atleta__desc {\n  color: #444;\n  margin: 0;\n  padding: 0;\n  font-size: .8em;\n  line-height: 1em; }\n\n.selected {\n  color: green;\n  /*background: #ccc;\r\n    line-height: 1.6em;*/ }\n\n.user-options-dropdown {\n  background: #f1f1f1;\n  margin-right: .1em; }\n", ""]);
+exports.push([module.i, ".spinner {\n  margin: 1em;\n  text-align: center;\n  width: 100%; }\n\n.login-button {\n  border: 0;\n  border-radius: .5em;\n  box-sizing: border-box;\n  color: #f9f9f9;\n  display: block;\n  font-size: 1.2em;\n  margin: 1em;\n  padding: .4em;\n  transition: background .4s; }\n  .login-button:hover {\n    background: #f9f9f9;\n    cursor: pointer; }\n\n.google {\n  background-color: #d34836; }\n  .google:hover {\n    border: 1px solid #d34836;\n    color: #d34836; }\n\n.facebook {\n  background-color: #3b5998; }\n  .facebook:hover {\n    border: 1px solid #3b5998;\n    color: #3b5998; }\n\n.twitter {\n  background-color: #00aced; }\n  .twitter:hover {\n    border: 1px solid #00aced;\n    color: #00aced; }\n\n.user-in {\n  padding: .8em; }\n  .user-in p {\n    font-size: .8em; }\n\n.input-file {\n  font-size: .7em; }\n\n.input-text {\n  background: none; }\n\n.atleta__item {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  padding-bottom: .5em;\n  padding-left: .5em;\n  position: relative; }\n  .atleta__item:hover {\n    background: #f9f9f9; }\n\n.atleta__title {\n  color: #FC0D0D;\n  font-size: 1.5em;\n  margin: 0; }\n\np.atleta__desc {\n  color: #444;\n  font-size: .8em;\n  line-height: 1em;\n  margin: 0;\n  padding: 0; }\n\n.selected {\n  color: green;\n  /*background: #ccc;\r\n  line-height: 1.6em;*/ }\n\n.user-options-dropdown {\n  background: #f9f9f9; }\n", ""]);
 
 // exports
 
@@ -27295,6 +27317,381 @@ exports.cleanHeader = function(header, shouldStripCookie){
   }
   return header;
 };
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Admin = undefined;
+
+var _admin = __webpack_require__(220);
+
+var _admin2 = _interopRequireDefault(_admin);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Admin = _admin2.default;
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ListaClubes = __webpack_require__(221);
+
+var _ListaClubes2 = _interopRequireDefault(_ListaClubes);
+
+var _utils = __webpack_require__(59);
+
+var _Spinner = __webpack_require__(22);
+
+var _Spinner2 = _interopRequireDefault(_Spinner);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Admin = function (_Component) {
+    _inherits(Admin, _Component);
+
+    function Admin() {
+        _classCallCheck(this, Admin);
+
+        var _this = _possibleConstructorReturn(this, (Admin.__proto__ || Object.getPrototypeOf(Admin)).call(this));
+
+        _this.state = {
+            clubes: ''
+        };
+        return _this;
+    }
+
+    _createClass(Admin, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
+
+            console.log('Montando Admin');
+            _utils.APIManager.get('api/club', {}, function (err, res) {
+                if (err) {
+                    alert('ERROR: Ha fallado la conexión al servidor: ', err.message);
+                    return;
+                }
+                console.log('Salida de request, lista de clubes: ', res.results);
+                _this2.setState({ clubes: res.results });
+            });
+        }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate() {
+            console.log('Componente actualizandose');
+            if (!this.state.clubes) {
+                return true;
+            } else {
+                return;
+            }
+        }
+    }, {
+        key: 'componentWillUpdate',
+        value: function componentWillUpdate() {}
+    }, {
+        key: 'render',
+        value: function render() {
+            console.log('lista de clubes en render: ', this.state.clubes);
+            if (!this.state.clubes) {
+                return _react2.default.createElement(_Spinner2.default, null);
+            } else {
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(_ListaClubes2.default, { listado: this.state.clubes })
+                    )
+                );
+            }
+        }
+    }]);
+
+    return Admin;
+}(_react.Component);
+
+exports.default = Admin;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Spinner = __webpack_require__(22);
+
+var _Spinner2 = _interopRequireDefault(_Spinner);
+
+var _FiltrarClubes = __webpack_require__(222);
+
+var _FiltrarClubes2 = _interopRequireDefault(_FiltrarClubes);
+
+var _ListaFiltrada = __webpack_require__(223);
+
+var _ListaFiltrada2 = _interopRequireDefault(_ListaFiltrada);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ListaClubes = function (_Component) {
+    _inherits(ListaClubes, _Component);
+
+    function ListaClubes() {
+        _classCallCheck(this, ListaClubes);
+
+        var _this = _possibleConstructorReturn(this, (ListaClubes.__proto__ || Object.getPrototypeOf(ListaClubes)).call(this));
+
+        _this.state = {
+            clubes: [],
+            filtro: ''
+        };
+        return _this;
+    }
+
+    _createClass(ListaClubes, [{
+        key: 'actualizarClub',
+        value: function actualizarClub(value) {
+            this.setState({ filtro: value });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            console.log('lista de clubes en render: ', this.props.listado);
+            if (!this.props.listado) {
+                return _react2.default.createElement(_Spinner2.default, null);
+            } else {
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_FiltrarClubes2.default, {
+                        actualizarFiltro: this.actualizarClub.bind(this),
+                        filtrarClub: this.state.filtro
+                    }),
+                    _react2.default.createElement(_ListaFiltrada2.default, {
+                        filtrarClub: this.state.filtro,
+                        listado: this.props.listado
+                    })
+                );
+            }
+        }
+    }]);
+
+    return ListaClubes;
+}(_react.Component);
+
+exports.default = ListaClubes;
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FiltrarClubes = function (_Component) {
+    _inherits(FiltrarClubes, _Component);
+
+    function FiltrarClubes() {
+        _classCallCheck(this, FiltrarClubes);
+
+        return _possibleConstructorReturn(this, (FiltrarClubes.__proto__ || Object.getPrototypeOf(FiltrarClubes)).apply(this, arguments));
+    }
+
+    _createClass(FiltrarClubes, [{
+        key: "actualizarFiltro",
+        value: function actualizarFiltro() {
+            var val = this.myvalue.value;
+            this.props.actualizarFiltro(this.myvalue.value);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "h1",
+                    null,
+                    "FiltrarClubes"
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    this.props.filtrarClub
+                ),
+                _react2.default.createElement(
+                    "form",
+                    { action: "" },
+                    _react2.default.createElement("input", {
+                        type: "text",
+                        ref: function ref(value) {
+                            return _this2.myvalue = value;
+                        },
+                        placeholder: "Filtrar Clubes",
+                        onChange: this.actualizarFiltro.bind(this)
+                    })
+                )
+            );
+        }
+    }]);
+
+    return FiltrarClubes;
+}(_react.Component);
+
+exports.default = FiltrarClubes;
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Spinner = __webpack_require__(22);
+
+var _Spinner2 = _interopRequireDefault(_Spinner);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ListaFiltrada = function (_Component) {
+    _inherits(ListaFiltrada, _Component);
+
+    function ListaFiltrada() {
+        _classCallCheck(this, ListaFiltrada);
+
+        return _possibleConstructorReturn(this, (ListaFiltrada.__proto__ || Object.getPrototypeOf(ListaFiltrada)).apply(this, arguments));
+    }
+
+    _createClass(ListaFiltrada, [{
+        key: 'render',
+        value: function render() {
+            var _props = this.props,
+                listado = _props.listado,
+                filtrarClub = _props.filtrarClub;
+
+
+            var listaclubes = listado.filter(function (club) {
+                return club.club.toLowerCase().indexOf(filtrarClub.toLowerCase()) >= 0;
+            }).map(function (club, i) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: i },
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        club.club
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                club.participantes
+                            )
+                        )
+                    )
+                );
+            }).sort();
+            if (!this.props.listado) {
+                return _react2.default.createElement(_Spinner2.default, null);
+            } else {
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    listaclubes
+                );
+            }
+        }
+    }]);
+
+    return ListaFiltrada;
+}(_react.Component);
+
+exports.default = ListaFiltrada;
 
 /***/ })
 /******/ ]);

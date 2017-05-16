@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Home from './components/layout/Home'
+import { Admin } from './components/admin'
 import firebase from 'firebase'
 
 firebase.initializeApp({
@@ -22,7 +23,12 @@ class App extends Component {
     }
 }
 
+// ReactDOM.render(
+//     <App />,
+//     document.getElementById('react')
+// )
+
 ReactDOM.render(
-    <App />,
-    document.getElementById('react')
+    <Admin />,
+    document.getElementById('admin')
 )

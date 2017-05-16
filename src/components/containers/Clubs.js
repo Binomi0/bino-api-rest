@@ -62,6 +62,11 @@ class Clubs extends Component {
         })
     }
 
+    selectedIndex(index){
+        //console.log('Selected Index')
+        this.setState({ selected: index })
+    }
+
     render() { 
         //console.log('Renderizando Clubs', this.state.list)
         return (
@@ -69,9 +74,15 @@ class Clubs extends Component {
                 <div className="ed-item">
                     <h4>Bienvenido, {this.state.list.club} <span className="w3-badge w3-blue">{this.state.list.codigo}</span></h4>                
                 </div>
+                <div className="club__container ed-container">
+                    <div className="ed-item">
+                        <Club club={this.state.list} selectedIndex={this.selectedIndex.bind(this)}/>
+                    </div>
+                </div>
                 {
                     this.state.activado === false ? 
-                    <CreateClub onCreate={this.addClub.bind(this)} activado={this.state.activado} user={this.props.user} /> : 
+                    <CreateClub onCreate={this.addClub.bind(this)} activado={this.state.activado} user={this.props.user} />
+                     : 
                     <Atletas codigo={this.state.codigo} club={this.state.list} />                     
                 }
             </div>
