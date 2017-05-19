@@ -1,5 +1,3 @@
-'use strict'
-
 const services = require('../services')
 
 function isAuth (req, res, next) {
@@ -7,10 +5,11 @@ function isAuth (req, res, next) {
         return res.status(403).send({ message: 'No tienes autorización' })
     }
 
-    const token = req.headers.authorization.split(' ')[1]
-    
+    var token = req.headers.authorization.split(' ')[1]
+    console.log('Recibo el token: ', token)
     services.decodeToken(token)
     .then(response => {
+        console.log('Respuesta de isAuth: ', response)
         req.user = response
         next()
     })

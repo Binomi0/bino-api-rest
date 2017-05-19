@@ -1,10 +1,27 @@
 var express = require('express')
-//var auth = require('../middlewares/auth')
-var router = express.Router()
+var auth = require('../middlewares/auth')
+// , LocalStrategy = require('passport-local').Strategy
+, userCtrl = require('../controllers/UserController')
+, router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' })
+  res.render('index', { title: 'Panel de Admin de Karate Santa Pola' })
+});
+
+router.post('/signup', userCtrl.signUp)
+router.post('/signin', userCtrl.signIn)
+router.get('/registro', (req, res) => {
+  res.render('registro')
+})
+
+router.post('/login', (req, res) => {
+  console.log('REQ: ',req.body, 'RES: ', res.body)
+  res.render('login')
+})
+
+router.get('/admin', auth, function (req, res) {
+    res.render('admin')
 });
 
 router.get('/:resource', function(req, res, next) {
@@ -35,15 +52,5 @@ router.get('/:resource', function(req, res, next) {
 // router.get('/deleteatleta', function(req, res, next) {
 //   res.render('deleteatleta', null)
 // });
-
-
-// router.get('/privado', auth, (req, res) => {
-//   res.status(200).send({ message: 'Tienes Acceso' })
-// })
-
-
-
-
-
 
 module.exports = router;

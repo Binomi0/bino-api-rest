@@ -5,6 +5,7 @@ const moment = require('moment')
 const config = require('../config')
 
 function createToken (user) {
+    console.log('Usuario: ',user._id)
     const payload = {
         sub: user._id,
         iat: moment().unix(),
@@ -25,8 +26,16 @@ function decodeToken (token) {
                     message: 'El token ha expirado'
                 })
             }
+            if (!payload.sub) {
+                reject({
+                    status: 401,
+                    message: 'No hay usuario'
+                })
+            }
+            console.log('Entro por el TRY en decodeToken no debe ser undefined o null: ', payload.sub)
             resolve(payload.sub)
         } catch (err) {
+            console.log('Entro por el catch con error en decodeToken')
             reject({
                 status: 500,
                 message: 'Invalid Token'

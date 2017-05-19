@@ -1,0 +1,27 @@
+extends layout
+
+block signin
+    form(id="signup" action="/signup" method="post")
+        input(type="text", name="email", placeholder="Tu email")
+        br
+        input(type="password", name="password", placeholder="Tu contraseña")
+        br
+        input(type="submit" value="Conectar")
+    //- script.
+    //-     const formLogin = document.querySelector('#signup')
+    //-     //console.log('Registrando usuario: ', formLogin)
+    //-     const formData = new FormData(formLogin)
+
+    //-     formLogin.addEventListener('submit', event => {
+    //-         //console.log('Registrando usuario: ', formData),
+
+    //-         event.preventDefault();
+    //-         fetch('/signup', {
+    //-             method: 'POST',
+    //-             body: formData
+    //-         })
+    //-         .then(res => res.json())
+    //-         .then(data => {
+    //-             localStorage.setItem('token', data.token)
+    //-         })
+    //-     })

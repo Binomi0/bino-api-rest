@@ -1,0 +1,23 @@
+extends layout
+
+block admin
+    script(type="text/javascript").
+        let clubList = document.createElement('ul')
+        const myHeaders = new Headers();
+        myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+
+        fetch('/api/club', {
+            method: 'GET',
+            headers: myHeaders
+        })
+        .then(res => res.json())
+        .then(data => {
+            data.results.map(club => {
+                let text = document.createTextNode(club.club)
+                let elem = document.createElement('li')
+                elem.appendChild(text)
+                clubList.appendChild(elem)
+            })
+
+            document.body.appendChild(clubList)
+        })

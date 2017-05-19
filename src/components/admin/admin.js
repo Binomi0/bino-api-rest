@@ -7,39 +7,58 @@ export default class Admin extends Component {
     constructor() {
         super()
         this.state = {
-            clubes: ''
+            clubes: '',
+            atletas: ''
         }
     }
-
-    componentWillMount() {
-        console.log('Montando Admin')
+    listarClubs(){
         APIManager.get('api/club', {}, (err, res) => {
             if (err){
                 alert('ERROR: Ha fallado la conexión al servidor: ', err.message)
                 return
             }
-            console.log('Salida de request, lista de clubes: ', res.results)
+            //console.log('Salida de request, lista de clubes: ', res.results)
             this.setState({ clubes: res.results })
+            return res.results
         })
     }
-    shouldComponentUpdate() {
-        console.log('Componente actualizandose')
-        if (!this.state.clubes) {
-            return true
-        } else {
-            return 
-        }
+    listarAtletas(){
+        APIManager.get('api/atleta', {}, (err, res) => {
+            if (err){
+                alert('ERROR: Ha fallado la conexión al servidor: ', err.message)
+                return
+            }
+            //console.log('Salida de request, lista de atletas: ', res.results)
+            this.setState({ atletas: res.results })
+            return res.results
+        })
     }
+    componentWillMount() {
+        console.log('Montando Admin')
+        let atletas = this.listarAtletas()
+        let clubes = this.listarClubs()
+        this.setState({ atletas, clubes })
+        
+    }
+    // shouldComponentUpdate() {
+    //     console.log('Componente actualizandose')
+    //     if (!this.state.clubes) {
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+    // }
     componentWillUpdate() {
 
     }
     render() {
-        console.log('lista de clubes en render: ', this.state.clubes)
+        //console.log('lista de clubes en render: ', this.state.clubes)
+        //console.log('lista de atletas en render: ', this.state.atletas)
         if (!this.state.clubes) { return <Spinner /> } else {
             return(
                 <div>
                     <ul>
-                        <ListaClubes listado={this.state.clubes}/>
+                        <ListaClubes clubes={this.state.clubes} atletas={this.state.atletas}/>
                     </ul>
                 </div>
             )

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../stylesheets/index.scss'
 
 export default class FiltrarClubes extends Component {
 
@@ -10,13 +11,14 @@ export default class FiltrarClubes extends Component {
     render() {
         return (
             <div>
-                <h1>FiltrarClubes</h1>
+                <h1>Filtro Inteligente</h1>
                 <p>{this.props.filtrarClub}</p>
                 <form action="">
                     <input 
+                        className="filtro-clases"
                         type="text"
                         ref={ (value) => this.myvalue = value }
-                        placeholder="Filtrar Clubes"
+                        placeholder="Filtro Inteligente"
                         onChange={this.actualizarFiltro.bind(this)}
                     />
                 </form>                

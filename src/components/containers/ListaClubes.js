@@ -8,17 +8,24 @@ export default class ListaClubes extends Component {
         super()
         this.state = {
             clubes: [],
-            filtro: ''
+            atletas: [],
+            filtro: '',
+            selected: null
         }
     }    
 
     actualizarClub(value) {
         this.setState({ filtro: value })
     }
+    seleccionarClub(index){
+        this.setState({ selected: index })
+    }
+
 
     render() {
-        console.log('lista de clubes en render: ', this.props.listado)
-        if (!this.props.listado) { return <Spinner /> } else {
+        console.log('lista de clubes en render: ', this.props.clubes)
+        console.log('lista de atletas en render: ', this.props.atletas)
+        if (!this.props.clubes) { return <Spinner /> } else {
             return (
                 <div>
                     <FiltrarClubes 
@@ -26,8 +33,11 @@ export default class ListaClubes extends Component {
                         filtrarClub={this.state.filtro}
                     />
                     <ListaFiltrada 
+                        index={this.state.selected}
+                        seleccionarClub={this.seleccionarClub.bind(this)}
                         filtrarClub={this.state.filtro}
-                        listado={this.props.listado}
+                        clubes={this.props.clubes}
+                        atletas={this.props.atletas}
                     />
                 </div>
             )            

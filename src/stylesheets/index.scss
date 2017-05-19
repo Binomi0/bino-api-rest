@@ -97,5 +97,17 @@ p.atleta__desc {
 }
 
 .user-options-dropdown {
-  background: $color5;    
+  background: $color5;
+}
+
+.club-container, .atleta-container {
+  background: #fff;
+  color: #080;
+  width: 100%;
+}
+
+
+.filtro-clases {
+  width: 90%;
+  margin: 10px auto;
 }
